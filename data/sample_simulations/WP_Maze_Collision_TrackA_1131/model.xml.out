@@ -1,0 +1,2077 @@
+Initializing from file model.xml
+AutoFix: Moved 2 element(s)  matching /MorpheusModel/CellTypes/CellType/System/DiffEqn/Expression to /MorpheusModel/CellTypes/CellType/System/DiffEqn/Reaction
+AutoFix: Moved 5 element(s)  matching /MorpheusModel/CellTypes/CellType/MembraneProperty[(@symbol)]/Diffusion[@rate!=~0(?:\.0+)?]/@rate to /MorpheusModel/CellTypes/CellType/System/DiffEqn[@symbol-ref=%1]/Diffusion/@text
+AutoFix: Moved 8 element(s)  matching /MorpheusModel/CellTypes/CellType/MembraneProperty[(@symbol)]/Diffusion to 
+Applied 15 patches to update MorpheusML version to internal v5!
+Time/RandomSeed not specified, using arbitray seed (based on time).
+Intitalize Thread 0 with seed 1753142869
+Intitalize Thread 2 with seed 1671089863
+Intitalize Thread 3 with seed 2119700914
+Intitalize Thread 1 with seed 819414380
+Registering Symbol time of linktype TimeLink in Scope root
+Time/RandomSeed not specified, using arbitray seed (based on time).
+Intitalize Thread 0 with seed 1753142869
+Intitalize Thread 3 with seed 2119700914
+Intitalize Thread 1 with seed 819414380
+Intitalize Thread 2 with seed 1671089863
+Registering Symbol l of linktype LocationLink in Scope root
+Registering Symbol l.x of linktype VectorComponentLink in Scope root
+Registering Symbol l.y of linktype VectorComponentLink in Scope root
+Registering Symbol l.z of linktype VectorComponentLink in Scope root
+Registering Symbol l.phi of linktype VectorComponentLink in Scope root
+Registering Symbol l.theta of linktype VectorComponentLink in Scope root
+Registering Symbol l.abs of linktype VectorComponentLink in Scope root
+Creating lattice
+getXMLAttribute: seeking for Lattice->class: square
+getXMLAttribute: seeking for Size->value: 300, 450, 0
+getXMLAttribute: seeking for Size->symbol: lattice
+Loading Domain Image
+Domain Tiff: 300x450,2x8bit
+Domain size 300, 450, 1
+Registering Symbol memsize of linktype PrimitiveConstant in Scope root
+Registering Symbol m of linktype MembraneSpaceLink in Scope root
+Registering Symbol m.x of linktype VectorComponentLink in Scope root
+Registering Symbol m.y of linktype VectorComponentLink in Scope root
+Registering Symbol m.z of linktype VectorComponentLink in Scope root
+Registering Symbol m.phi of linktype VectorComponentLink in Scope root
+Registering Symbol m.theta of linktype VectorComponentLink in Scope root
+Registering Symbol m.abs of linktype VectorComponentLink in Scope root
+Loading [15] Global Plugins
+getXMLAttribute: seeking for Constant->name .. not found
+getXMLAttribute: seeking for Constant->symbol: lengthscale
+getXMLAttribute: seeking for Constant->value: (1.5)*2*pi/132
+getXMLAttribute: seeking for Constant->notation .. not found
+Registering Symbol lengthscale of linktype ConstantLink in Scope root
+getXMLAttribute: seeking for Constant->name: Time to *end* first light stimulus from "time = 0"
+getXMLAttribute: seeking for Constant->symbol: ts1
+getXMLAttribute: seeking for Constant->value: 0
+getXMLAttribute: seeking for Constant->notation .. not found
+Registering Symbol ts1 of linktype ConstantLink in Scope root
+getXMLAttribute: seeking for Constant->name: Time to *starts* second light stimulus from "time = ts2"
+getXMLAttribute: seeking for Constant->symbol: ts2
+getXMLAttribute: seeking for Constant->value: 10
+getXMLAttribute: seeking for Constant->notation .. not found
+Registering Symbol ts2 of linktype ConstantLink in Scope root
+getXMLAttribute: seeking for Constant->name: Angular size of the light stimulus
+getXMLAttribute: seeking for Constant->symbol: L
+getXMLAttribute: seeking for Constant->value: pi/3
+getXMLAttribute: seeking for Constant->notation .. not found
+Registering Symbol L of linktype ConstantLink in Scope root
+getXMLAttribute: seeking for Variable->name .. not found
+getXMLAttribute: seeking for Variable->symbol: A
+getXMLAttribute: seeking for Variable->value: 0.0
+getXMLAttribute: seeking for Variable->notation .. not found
+Registering Symbol A of linktype VariableLink in Scope root
+getXMLAttribute: seeking for Variable->name .. not found
+getXMLAttribute: seeking for Variable->symbol: B
+getXMLAttribute: seeking for Variable->value: 0.0
+getXMLAttribute: seeking for Variable->notation .. not found
+Registering Symbol B of linktype VariableLink in Scope root
+getXMLAttribute: seeking for Field->symbol: prot
+Registering Symbol prot of linktype FieldLink in Scope root
+getXMLAttribute: seeking for Variable->name .. not found
+getXMLAttribute: seeking for Variable->symbol: ts3
+getXMLAttribute: seeking for Variable->value: 1000000
+getXMLAttribute: seeking for Variable->notation .. not found
+Registering Symbol ts3 of linktype VariableLink in Scope root
+getXMLAttribute: seeking for Field->symbol: U
+Registering Symbol U of linktype FieldLink in Scope root
+getXMLAttribute: seeking for Constant->name .. not found
+getXMLAttribute: seeking for Constant->symbol: noise
+getXMLAttribute: seeking for Constant->value: 0
+getXMLAttribute: seeking for Constant->notation .. not found
+Registering Symbol noise of linktype ConstantLink in Scope root
+Creating subscope Function in scope root
+getXMLAttribute: seeking for Function->symbol: noisy
+getXMLAttribute: seeking for Expression->text: max(0,(v+rand_norm(0,noise)))
+getXMLAttribute: seeking for Parameter[0]->symbol: v
+getXMLAttribute: seeking for Parameter[0]->name: value
+Registering Symbol noisy of linktype FunctionLink in Scope root
+getXMLAttribute: seeking for Constant->name .. not found
+getXMLAttribute: seeking for Constant->symbol: iteration_dummy
+getXMLAttribute: seeking for Constant->value: 1
+getXMLAttribute: seeking for Constant->notation .. not found
+Registering Symbol iteration_dummy of linktype ConstantLink in Scope root
+getXMLAttribute: seeking for Constant->name .. not found
+getXMLAttribute: seeking for Constant->symbol: middle
+getXMLAttribute: seeking for Constant->value: 3*pi/2+rand_uni(-0.3,0.3)
+getXMLAttribute: seeking for Constant->notation .. not found
+Registering Symbol middle of linktype ConstantLink in Scope root
+getXMLAttribute: seeking for Constant->name .. not found
+getXMLAttribute: seeking for Constant->symbol: DH
+getXMLAttribute: seeking for Constant->value: 0.04
+getXMLAttribute: seeking for Constant->notation .. not found
+Registering Symbol DH of linktype ConstantLink in Scope root
+getXMLAttribute: seeking for Constant->name .. not found
+getXMLAttribute: seeking for Constant->symbol: DP
+getXMLAttribute: seeking for Constant->value: 0.62
+getXMLAttribute: seeking for Constant->notation .. not found
+Registering Symbol DP of linktype ConstantLink in Scope root
+Creating subscope CellType[cells] in scope root
+Registering Symbol cell.type of linktype PrimitiveConstant in Scope CellType[cells]
+Registering Symbol cell.type of linktype CompositeLink in Scope root
+Registering Symbol cell.id of linktype CellIDLink in Scope CellType[cells]
+Registering Symbol cell.id of linktype CompositeLink in Scope root
+Registering Symbol cell.center of linktype CellCenterLink in Scope CellType[cells]
+Registering Symbol cell.center of linktype CompositeLink in Scope root
+Registering Symbol cell.center.x of linktype VectorComponentLink in Scope root
+Registering Symbol cell.center.y of linktype VectorComponentLink in Scope root
+Registering Symbol cell.center.z of linktype VectorComponentLink in Scope root
+Registering Symbol cell.center.phi of linktype VectorComponentLink in Scope root
+Registering Symbol cell.center.theta of linktype VectorComponentLink in Scope root
+Registering Symbol cell.center.abs of linktype VectorComponentLink in Scope root
+Registering Symbol cell.center.x of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol cell.center.y of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol cell.center.z of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol cell.center.phi of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol cell.center.theta of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol cell.center.abs of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol cell.volume of linktype CellVolumeLink in Scope CellType[cells]
+Registering Symbol cell.volume of linktype CompositeLink in Scope root
+Registering Symbol cell.length of linktype CellLengthLink in Scope CellType[cells]
+Registering Symbol cell.length of linktype CompositeLink in Scope root
+Registering Symbol cell.surface of linktype CellInterfaceLengthLink in Scope CellType[cells]
+Registering Symbol cell.surface of linktype CompositeLink in Scope root
+Registering Symbol cell.orientation of linktype CellOrientationLink in Scope CellType[cells]
+Registering Symbol cell.orientation of linktype CompositeLink in Scope root
+Registering Symbol cell.orientation.x of linktype VectorComponentLink in Scope root
+Registering Symbol cell.orientation.y of linktype VectorComponentLink in Scope root
+Registering Symbol cell.orientation.z of linktype VectorComponentLink in Scope root
+Registering Symbol cell.orientation.phi of linktype VectorComponentLink in Scope root
+Registering Symbol cell.orientation.theta of linktype VectorComponentLink in Scope root
+Registering Symbol cell.orientation.abs of linktype VectorComponentLink in Scope root
+Registering Symbol cell.orientation.x of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol cell.orientation.y of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol cell.orientation.z of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol cell.orientation.phi of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol cell.orientation.theta of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol cell.orientation.abs of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol celltype.cells.id of linktype PrimitiveConstant in Scope root
+Registering Symbol celltype.cells.size of linktype CellPopulationSizeLink in Scope root
+getXMLAttribute: seeking for VolumeConstraint->target: 1385
+getXMLAttribute: seeking for VolumeConstraint->strength: 1
+getXMLAttribute: seeking for SurfaceConstraint->target: 1.2
+getXMLAttribute: seeking for SurfaceConstraint->strength: 0.8
+getXMLAttribute: seeking for SurfaceConstraint->mode: aspherity
+getXMLAttribute: seeking for SurfaceConstraint->exponent .. not found
+getXMLAttribute: seeking for MembraneProperty->symbol: A
+Registering Symbol A of linktype MembranePropertyLink in Scope CellType[cells]
+Registering Symbol A of linktype CompositeLink in Scope root
+getXMLAttribute: seeking for MembraneProperty->symbol: B
+Registering Symbol B of linktype MembranePropertyLink in Scope CellType[cells]
+Registering Symbol B of linktype CompositeLink in Scope root
+getXMLAttribute: seeking for MembraneProperty->symbol: H
+Registering Symbol H of linktype MembranePropertyLink in Scope CellType[cells]
+Registering Symbol H of linktype CompositeLink in Scope root
+getXMLAttribute: seeking for MembraneProperty->symbol: P3
+Registering Symbol P3 of linktype MembranePropertyLink in Scope CellType[cells]
+Registering Symbol P3 of linktype CompositeLink in Scope root
+getXMLAttribute: seeking for MembraneProperty->symbol: P2
+Registering Symbol P2 of linktype MembranePropertyLink in Scope CellType[cells]
+Registering Symbol P2 of linktype CompositeLink in Scope root
+getXMLAttribute: seeking for System->time-step: 0.05
+Creating subscope System in scope CellType[cells]
+getXMLAttribute: seeking for System->solver: Euler [fixed, O(1)]
+getXMLAttribute: seeking for System->solver-eps .. not found
+getXMLAttribute: seeking for Constant->name .. not found
+getXMLAttribute: seeking for Constant->symbol: k_0
+getXMLAttribute: seeking for Constant->value: rand_norm(0.028, 0.000765)
+getXMLAttribute: seeking for Constant->notation .. not found
+Registering Symbol k_0 of linktype ConstantLink in Scope System
+getXMLAttribute: seeking for Constant->name .. not found
+getXMLAttribute: seeking for Constant->symbol: k_1
+getXMLAttribute: seeking for Constant->value: rand_norm(0.372, 0.006632)
+getXMLAttribute: seeking for Constant->notation .. not found
+Registering Symbol k_1 of linktype ConstantLink in Scope System
+getXMLAttribute: seeking for Constant->name .. not found
+getXMLAttribute: seeking for Constant->symbol: s_1
+getXMLAttribute: seeking for Constant->value: rand_norm(0.059, 0.001530)
+getXMLAttribute: seeking for Constant->notation .. not found
+Registering Symbol s_1 of linktype ConstantLink in Scope System
+getXMLAttribute: seeking for Constant->name .. not found
+getXMLAttribute: seeking for Constant->symbol: gamma
+getXMLAttribute: seeking for Constant->value: rand_norm(1.38, 0.0214)
+getXMLAttribute: seeking for Constant->notation .. not found
+Registering Symbol gamma of linktype ConstantLink in Scope System
+getXMLAttribute: seeking for Constant->name .. not found
+getXMLAttribute: seeking for Constant->symbol: delta
+getXMLAttribute: seeking for Constant->value: rand_norm(0.721, 0.006887)
+getXMLAttribute: seeking for Constant->notation .. not found
+Registering Symbol delta of linktype ConstantLink in Scope System
+getXMLAttribute: seeking for Constant->name .. not found
+getXMLAttribute: seeking for Constant->symbol: K
+getXMLAttribute: seeking for Constant->value: rand_norm(2.93, 0.0408)
+getXMLAttribute: seeking for Constant->notation .. not found
+Registering Symbol K of linktype ConstantLink in Scope System
+getXMLAttribute: seeking for Constant->name: Hill coefficient
+getXMLAttribute: seeking for Constant->symbol: n
+getXMLAttribute: seeking for Constant->value: 2
+getXMLAttribute: seeking for Constant->notation .. not found
+Registering Symbol n of linktype ConstantLink in Scope System
+getXMLAttribute: seeking for DiffEqn->symbol-ref: A
+getXMLAttribute: seeking for Reaction->text: F
+getXMLAttribute: seeking for Advection->text .. not found
+getXMLAttribute: seeking for Diffusion->text: 0.12/lengthscale^2
+getXMLAttribute: seeking for Diffusion->well-mixed .. not found
+getXMLAttribute: seeking for DiffEqn->symbol-ref: B
+getXMLAttribute: seeking for Reaction->text: -F
+getXMLAttribute: seeking for Advection->text .. not found
+getXMLAttribute: seeking for Diffusion->text: 1*1/lengthscale^2
+getXMLAttribute: seeking for Diffusion->well-mixed .. not found
+getXMLAttribute: seeking for Rule->symbol-ref: rate1
+getXMLAttribute: seeking for Expression->text: F
+getXMLAttribute: seeking for DiffEqn->symbol-ref: H
+getXMLAttribute: seeking for Reaction->text .. not found
+getXMLAttribute: seeking for Advection->text .. not found
+getXMLAttribute: seeking for Diffusion->text: 0.09/lengthscale^2
+getXMLAttribute: seeking for Diffusion->well-mixed .. not found
+Skipping ODE for H
+getXMLAttribute: seeking for DiffEqn->symbol-ref: P3
+getXMLAttribute: seeking for Reaction->text .. not found
+getXMLAttribute: seeking for Advection->text .. not found
+getXMLAttribute: seeking for Diffusion->text: DP/lengthscale^2
+getXMLAttribute: seeking for Diffusion->well-mixed .. not found
+Skipping ODE for P3
+getXMLAttribute: seeking for DiffEqn->symbol-ref: P2
+getXMLAttribute: seeking for Reaction->text .. not found
+getXMLAttribute: seeking for Advection->text .. not found
+getXMLAttribute: seeking for Diffusion->text: DP/lengthscale^2
+getXMLAttribute: seeking for Diffusion->well-mixed .. not found
+Skipping ODE for P2
+getXMLAttribute: seeking for PropertyVector->name: polarity
+getXMLAttribute: seeking for PropertyVector->symbol: p
+getXMLAttribute: seeking for PropertyVector->value: 0.0, 0.0, 0.0
+getXMLAttribute: seeking for PropertyVector->notation .. not found
+Registering Symbol p of linktype CellPropertyLink in Scope CellType[cells]
+Registering Symbol p of linktype CompositeLink in Scope root
+Registering Symbol p.x of linktype VectorComponentLink in Scope root
+Registering Symbol p.y of linktype VectorComponentLink in Scope root
+Registering Symbol p.z of linktype VectorComponentLink in Scope root
+Registering Symbol p.phi of linktype VectorComponentLink in Scope root
+Registering Symbol p.theta of linktype VectorComponentLink in Scope root
+Registering Symbol p.abs of linktype VectorComponentLink in Scope root
+Registering Symbol p.x of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol p.y of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol p.z of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol p.phi of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol p.theta of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol p.abs of linktype VectorComponentLink in Scope CellType[cells]
+getXMLAttribute: seeking for Input->value: A
+getXMLAttribute: seeking for Polarity->symbol-ref: p
+getXMLAttribute: seeking for StarConvex->membrane: A
+getXMLAttribute: seeking for StarConvex->strength: 10
+getXMLAttribute: seeking for StarConvex->protrusion .. not found
+getXMLAttribute: seeking for StarConvex->retraction .. not found
+getXMLAttribute: seeking for Protrusion->field: prot
+getXMLAttribute: seeking for Protrusion->strength: 10
+getXMLAttribute: seeking for Protrusion->maximum: 500
+getXMLAttribute: seeking for Property->name: Tension
+getXMLAttribute: seeking for Property->symbol: T
+getXMLAttribute: seeking for Property->value: 0
+getXMLAttribute: seeking for Property->notation .. not found
+Registering Symbol T of linktype CellPropertyLink in Scope CellType[cells]
+Registering Symbol T of linktype CompositeLink in Scope root
+getXMLAttribute: seeking for Event->delay .. not found
+getXMLAttribute: seeking for Event->compute-time .. not found
+getXMLAttribute: seeking for Event->trigger .. not found
+getXMLAttribute: seeking for Condition->history .. not found
+getXMLAttribute: seeking for Event->persistent .. not found
+Scope: Creating Accessor for symbol 'time' from Scope root
+Creating subscope System in scope CellType[cells]
+getXMLAttribute: seeking for Rule->symbol-ref: ts3
+getXMLAttribute: seeking for Expression->text: time+0
+getXMLAttribute: seeking for MembraneProperty->symbol: rate
+Registering Symbol rate of linktype MembranePropertyLink in Scope CellType[cells]
+Registering Symbol rate of linktype CompositeLink in Scope root
+getXMLAttribute: seeking for MembraneProperty->symbol: rate1
+Registering Symbol rate1 of linktype MembranePropertyLink in Scope CellType[cells]
+Registering Symbol rate1 of linktype CompositeLink in Scope root
+getXMLAttribute: seeking for Input->value: U
+getXMLAttribute: seeking for Polarity->symbol-ref: p1
+getXMLAttribute: seeking for PropertyVector->name: polarity1
+getXMLAttribute: seeking for PropertyVector->symbol: p1
+getXMLAttribute: seeking for PropertyVector->value: 0.0, 0.0, 0.0
+getXMLAttribute: seeking for PropertyVector->notation .. not found
+Registering Symbol p1 of linktype CellPropertyLink in Scope CellType[cells]
+Registering Symbol p1 of linktype CompositeLink in Scope root
+Registering Symbol p1.x of linktype VectorComponentLink in Scope root
+Registering Symbol p1.y of linktype VectorComponentLink in Scope root
+Registering Symbol p1.z of linktype VectorComponentLink in Scope root
+Registering Symbol p1.phi of linktype VectorComponentLink in Scope root
+Registering Symbol p1.theta of linktype VectorComponentLink in Scope root
+Registering Symbol p1.abs of linktype VectorComponentLink in Scope root
+Registering Symbol p1.x of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol p1.y of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol p1.z of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol p1.phi of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol p1.theta of linktype VectorComponentLink in Scope CellType[cells]
+Registering Symbol p1.abs of linktype VectorComponentLink in Scope CellType[cells]
+Creating subscope System in scope CellType[cells]
+getXMLAttribute: seeking for System->solver: Dormand-Prince [adaptive, O(5)]
+getXMLAttribute: seeking for System->solver-eps .. not found
+getXMLAttribute: seeking for Rule->symbol-ref: T
+getXMLAttribute: seeking for Expression->text: 160-cell.surface
+getXMLAttribute: seeking for MembraneProperty->symbol: s
+Registering Symbol s of linktype MembranePropertyLink in Scope CellType[cells]
+Registering Symbol s of linktype CompositeLink in Scope root
+getXMLAttribute: seeking for Input->value: U
+getXMLAttribute: seeking for Polarity->symbol-ref .. not found
+getXMLAttribute: seeking for Output[0]->mapping: average
+getXMLAttribute: seeking for Output[0]->symbol-ref: s
+CellTypes defined: 'cells' 
+Creating subscope CellType[Medium] in scope root
+Registering Symbol cell.type of linktype PrimitiveConstant in Scope CellType[Medium]
+Registering Symbol cell.id of linktype CellIDLink in Scope CellType[Medium]
+Registering Symbol cell.center of linktype CellCenterLink in Scope CellType[Medium]
+Registering Symbol cell.center.x of linktype VectorComponentLink in Scope CellType[Medium]
+Registering Symbol cell.center.y of linktype VectorComponentLink in Scope CellType[Medium]
+Registering Symbol cell.center.z of linktype VectorComponentLink in Scope CellType[Medium]
+Registering Symbol cell.center.phi of linktype VectorComponentLink in Scope CellType[Medium]
+Registering Symbol cell.center.theta of linktype VectorComponentLink in Scope CellType[Medium]
+Registering Symbol cell.center.abs of linktype VectorComponentLink in Scope CellType[Medium]
+Registering Symbol cell.volume of linktype CellVolumeLink in Scope CellType[Medium]
+getXMLAttribute: seeking for MonteCarloSampler/MCSDuration->value: 0.3
+getXMLAttribute: seeking for MonteCarloSampler->stepper: edgelist
+getXMLAttribute: seeking for MonteCarloSampler/MetropolisKinetics->temperature: 1
+getXMLAttribute: seeking for MonteCarloSampler/MetropolisKinetics->yield: 0.05
+Registering Symbol lattice of linktype PrimitiveConstant in Scope root
+Registering Symbol lattice.x of linktype VectorComponentLink in Scope root
+Registering Symbol lattice.y of linktype VectorComponentLink in Scope root
+Registering Symbol lattice.z of linktype VectorComponentLink in Scope root
+Registering Symbol lattice.phi of linktype VectorComponentLink in Scope root
+Registering Symbol lattice.theta of linktype VectorComponentLink in Scope root
+Registering Symbol lattice.abs of linktype VectorComponentLink in Scope root
+Setting boundary neighborhood to order 3
+Assigning Shape Neighborhood of size 3 -> 28 neighbors.
+Setting boundary neighborhood to order 6
+Creating cell layer of size 3.72559 MB
+with initial state set to CellType 'Medium'
+!!! creating domain buffer
+Creating enumeration map
+getXMLAttribute: seeking for InitCellObjects->mode: distance
+Initializing celltype 'cells'
+SymbolFocus::cell(): SymbolFocus cannot deduce cell.
+No position or cell associated with the Focus.
+Warning: Could not initialize default of membrane property A.
+SymbolFocus::cell(): SymbolFocus cannot deduce cell.
+No position or cell associated with the Focus.
+Warning: Could not initialize default of membrane property B.
+SymbolFocus::cell(): SymbolFocus cannot deduce cell.
+No position or cell associated with the Focus.
+Warning: Could not initialize default of membrane property H.
+SymbolFocus::cell(): SymbolFocus cannot deduce cell.
+No position or cell associated with the Focus.
+Warning: Could not initialize default of membrane property P3.
+SymbolFocus::cell(): SymbolFocus cannot deduce cell.
+No position or cell associated with the Focus.
+Warning: Could not initialize default of membrane property P2.
+Scope: Creating Accessor for symbol 'A' from Scope CellType[cells]
+Scope: Creating Accessor for symbol 'B' from Scope CellType[cells]
+Scope: Creating Accessor for symbol 'rate1' from Scope CellType[cells]
+Scope: Creating Accessor for symbol 'A' from Scope CellType[cells]
+Scope: Creating Accessor for symbol 'lengthscale' from Scope root
+Creating FwdEulerADSolver
+Scope: Creating Accessor for symbol 'B' from Scope CellType[cells]
+Scope: Creating Accessor for symbol 'lengthscale' from Scope root
+Creating FwdEulerADSolver
+Scope: Creating Accessor for symbol 'H' from Scope CellType[cells]
+Scope: Creating Accessor for symbol 'lengthscale' from Scope root
+Creating FwdEulerADSolver
+Scope: Creating Accessor for symbol 'P3' from Scope CellType[cells]
+Scope: Creating Accessor for symbol 'DP' from Scope root
+Scope: Creating Accessor for symbol 'lengthscale' from Scope root
+Creating FwdEulerADSolver
+Scope: Creating Accessor for symbol 'P2' from Scope CellType[cells]
+Scope: Creating Accessor for symbol 'DP' from Scope root
+Scope: Creating Accessor for symbol 'lengthscale' from Scope root
+Creating FwdEulerADSolver
+Scope: Creating Accessor for symbol 'k_0' from Scope System
+Scope: Creating Accessor for symbol 's_1' from Scope System
+Scope: Creating Accessor for symbol 's' from Scope CellType[cells]
+Scope: Creating Accessor for symbol 'gamma' from Scope System
+Scope: Creating Accessor for symbol 'n' from Scope System
+Scope: Creating Accessor for symbol 'K' from Scope System
+Scope: Creating Accessor for symbol 'delta' from Scope System
+Scope: Creating Accessor for symbol 'k_1' from Scope System
+Scope: Creating Accessor for symbol 'H' from Scope CellType[cells]
+Scope: Creating Accessor for symbol 'T' from Scope CellType[cells]
+Warning: Could not initialize default property T of celltype cells.
+System::init: Reordering Initializers ...
+Scope: Creating Accessor for symbol 'A' from Scope CellType[cells]
+Scope: Creating Accessor for symbol 'p' from Scope CellType[cells]
+Plugin Mapper: Registered input symbol dependencies A [CellType[cells]] ,
+PluginMapper: Registered output symbol dependencies p [CellType[cells]] ,
+Scope: Creating Accessor for symbol 'cell.center' from Scope CellType[cells]
+Scope: Creating Accessor for symbol 'A' from Scope CellType[cells]
+Plugin StarConvex: Registered input symbol dependencies A [CellType[cells]] ,
+Scope: Creating Accessor for symbol 'prot' from Scope root
+!!! creating domain buffer
+Plugin Protrusion: Registered input symbol dependencies prot [root] ,
+PluginProtrusion: Registered output symbol dependencies prot [root] ,
+Scope: Creating Accessor for symbol 'prot' from Scope root
+Plugin Protrusion: Registered input symbol dependencies prot [root] ,
+PluginProtrusion: Registered output symbol dependencies prot [root] ,
+Plugin Event: Registered input symbol dependencies time [root] ,
+Scope: Creating Accessor for symbol 'ts3' from Scope root
+System::init: Reordering Initializers ...
+Scope: Creating Accessor for symbol 'p.phi' from Scope CellType[cells]
+Scope: Creating Accessor for symbol 'time' from Scope root
+Scope: Creating Accessor for symbol 'ts2' from Scope root
+SymbolFocus::cell(): SymbolFocus cannot deduce cell.
+No position or cell associated with the Focus.
+Warning: Could not initialize default of membrane property rate.
+SymbolFocus::cell(): SymbolFocus cannot deduce cell.
+No position or cell associated with the Focus.
+Warning: Could not initialize default of membrane property rate1.
+Scope: Creating Accessor for symbol 'U' from Scope root
+!!! creating domain buffer
+getXMLAttribute: seeking for TIFFReader->filename: GapsSlalom_300x450_grayscale_16bit.tiff
+getXMLAttribute: seeking for TIFFReader->offset .. not found
+getXMLAttribute: seeking for TIFFReader->keepIDs .. not found
+getXMLAttribute: seeking for TIFFReader->scaleToMax .. not found
+TIFF Reader: 300x450,1x16bit
+TIFF image is 16 bit. Using scanline method
+TIFFReader: PDE values will be normalized to 1.0 (divided by 65535).
+TIFFReader: loading TIFF for '' took 2.882 ms.
+Scope: Creating Accessor for symbol 'p1' from Scope CellType[cells]
+Warning: Could not initialize default property p1 of celltype cells.
+Plugin Mapper: Registered input symbol dependencies U [root] ,
+PluginMapper: Registered output symbol dependencies p1 [CellType[cells]] ,
+Scope: Creating Accessor for symbol 'cell.center' from Scope CellType[cells]
+Scope: Creating Accessor for symbol 'T' from Scope CellType[cells]
+Scope: Creating Accessor for symbol 'cell.surface' from Scope CellType[cells]
+System::init: Reordering Initializers ...
+SymbolFocus::cell(): SymbolFocus cannot deduce cell.
+No position or cell associated with the Focus.
+Warning: Could not initialize default of membrane property s.
+Scope: Creating Accessor for symbol 'U' from Scope root
+Scope: Creating Accessor for symbol 's' from Scope CellType[cells]
+Plugin Mapper: Registered input symbol dependencies U [root] ,
+PluginMapper: Registered output symbol dependencies s [CellType[cells]] ,
+Scope: Creating Accessor for symbol 'cell.center' from Scope CellType[cells]
+getXMLAttribute: seeking for Arrangement->repetitions: 1, 1, 0
+getXMLAttribute: seeking for Arrangement->displacements: 1, 1, 0
+getXMLAttribute: seeking for Arrangement->random_displacement .. not found
+InitCellObjects: Arrange: displacement: 1, 1, 0, repetitions: 1, 1, 1
+getXMLAttribute: seeking for Sphere->center: lattice.x*0.05, 0.05*lattice.y, 0
+getXMLAttribute: seeking for Sphere->radius: 21
+Scope: Creating Accessor for symbol 'lattice.x' from Scope root
+Scope: Creating Accessor for symbol 'lattice.y' from Scope root
+InitCellObjects: Arranged 1 objects.
+setNode(): Rejecting write to constant node at 0, 8, 0.
+setNode(): Rejecting write to constant node at 0, 9, 0.
+setNode(): Rejecting write to constant node at 0, 10, 0.
+setNode(): Rejecting write to constant node at 0, 11, 0.
+setNode(): Rejecting write to constant node at 0, 12, 0.
+setNode(): Rejecting write to constant node at 0, 13, 0.
+setNode(): Rejecting write to constant node at 0, 14, 0.
+setNode(): Rejecting write to constant node at 0, 15, 0.
+setNode(): Rejecting write to constant node at 0, 16, 0.
+setNode(): Rejecting write to constant node at 0, 17, 0.
+setNode(): Rejecting write to constant node at 0, 18, 0.
+setNode(): Rejecting write to constant node at 0, 19, 0.
+setNode(): Rejecting write to constant node at 0, 20, 0.
+setNode(): Rejecting write to constant node at 0, 21, 0.
+setNode(): Rejecting write to constant node at 0, 22, 0.
+setNode(): Rejecting write to constant node at 0, 23, 0.
+setNode(): Rejecting write to constant node at 0, 24, 0.
+setNode(): Rejecting write to constant node at 0, 25, 0.
+setNode(): Rejecting write to constant node at 0, 26, 0.
+setNode(): Rejecting write to constant node at 0, 27, 0.
+setNode(): Rejecting write to constant node at 0, 28, 0.
+setNode(): Rejecting write to constant node at 0, 29, 0.
+setNode(): Rejecting write to constant node at 0, 30, 0.
+setNode(): Rejecting write to constant node at 0, 31, 0.
+setNode(): Rejecting write to constant node at 0, 32, 0.
+setNode(): Rejecting write to constant node at 0, 33, 0.
+setNode(): Rejecting write to constant node at 0, 34, 0.
+setNode(): Rejecting write to constant node at 0, 35, 0.
+setNode(): Rejecting write to constant node at 0, 36, 0.
+setNode(): Rejecting write to constant node at 0, 37, 0.
+setNode(): Rejecting write to constant node at 1, 7, 0.
+setNode(): Rejecting write to constant node at 1, 8, 0.
+setNode(): Rejecting write to constant node at 1, 9, 0.
+setNode(): Rejecting write to constant node at 1, 10, 0.
+setNode(): Rejecting write to constant node at 1, 11, 0.
+setNode(): Rejecting write to constant node at 1, 12, 0.
+setNode(): Rejecting write to constant node at 1, 13, 0.
+setNode(): Rejecting write to constant node at 1, 14, 0.
+setNode(): Rejecting write to constant node at 1, 15, 0.
+setNode(): Rejecting write to constant node at 1, 16, 0.
+setNode(): Rejecting write to constant node at 1, 17, 0.
+setNode(): Rejecting write to constant node at 1, 18, 0.
+setNode(): Rejecting write to constant node at 1, 19, 0.
+setNode(): Rejecting write to constant node at 1, 20, 0.
+setNode(): Rejecting write to constant node at 1, 21, 0.
+setNode(): Rejecting write to constant node at 1, 22, 0.
+setNode(): Rejecting write to constant node at 1, 23, 0.
+setNode(): Rejecting write to constant node at 1, 24, 0.
+setNode(): Rejecting write to constant node at 1, 25, 0.
+setNode(): Rejecting write to constant node at 1, 26, 0.
+setNode(): Rejecting write to constant node at 1, 27, 0.
+setNode(): Rejecting write to constant node at 1, 28, 0.
+setNode(): Rejecting write to constant node at 1, 29, 0.
+setNode(): Rejecting write to constant node at 1, 30, 0.
+setNode(): Rejecting write to constant node at 1, 31, 0.
+setNode(): Rejecting write to constant node at 1, 32, 0.
+setNode(): Rejecting write to constant node at 1, 33, 0.
+setNode(): Rejecting write to constant node at 1, 34, 0.
+setNode(): Rejecting write to constant node at 1, 35, 0.
+setNode(): Rejecting write to constant node at 1, 36, 0.
+setNode(): Rejecting write to constant node at 1, 37, 0.
+setNode(): Rejecting write to constant node at 1, 38, 0.
+InitCellObject: Added 1 cell(s), occupying 1274 nodes
+Cells 1 requested 0
+Initializing celltype 'Medium'
+Scope: Creating Accessor for symbol 'cell.center' from Scope root
+Scope: Creating Accessor for symbol 'cell.volume' from Scope root
+Scope: Creating Accessor for symbol 'cell.surface' from Scope root
+Scope: Creating Accessor for symbol 'cell.length' from Scope root
+Scope: Creating Accessor for symbol 'cell.type' from Scope root
+creating Edge tracker 
+!!! creating domain buffer
+
+ thread_id = 
+ thread_id = 0x20e3adf00, register_thread_index = 1, shared_locks_array[cur_index].value = 1
+0x16f483000, register_thread_index = 0, shared_locks_array[cur_index].value = 1
+
+ thread_id = 0x16ec7b000, register_thread_index = 2, shared_locks_array[cur_index].value = 1
+
+ thread_id = 0x16e473000, register_thread_index = 3, shared_locks_array[cur_index].value = 1
+EdgeListTracker::init() : Created Tracker with Neighborhood size 8 of size 3.12402 MB
+EdgeListTracker::init() : Found 388 initial edges, wherof 388 can be modified.
+CPM: InteractionEnergy has 28 neighbors
+CPM: InteractionEnergy was initialized with  IA_COLLAPSE 
+Scope: Creating Accessor for symbol 'noise' from Scope root
+Loading Analysis tools [5]
+getXMLAttribute: seeking for Gnuplotter->file-numbering .. not found
+getXMLAttribute: seeking for Terminal->name: png
+getXMLAttribute: seeking for Terminal->size .. not found
+getXMLAttribute: seeking for Gnuplotter->time-step: 10
+getXMLAttribute: seeking for Cells->value: A
+getXMLAttribute: seeking for CellArrows->orientation: p*70
+getXMLAttribute: seeking for CellArrows->center .. not found
+getXMLAttribute: seeking for Field->symbol-ref: U
+getXMLAttribute: seeking for Field->coarsening .. not found
+getXMLAttribute: seeking for Field->min: 0
+getXMLAttribute: seeking for Field->max: 1
+getXMLAttribute: seeking for Field->isolines .. not found
+getXMLAttribute: seeking for Field->surface .. not found
+getXMLAttribute: seeking for CellTracker->format: ISBI 2012 (XML)
+getXMLAttribute: seeking for CellTracker->time-step: 1
+getXMLAttribute: seeking for Input/Symbol[0]->symbol-ref: m.phi
+getXMLAttribute: seeking for Input/Symbol[1]->symbol-ref: A
+getXMLAttribute: seeking for Input/Symbol[2]->symbol-ref: B
+getXMLAttribute: seeking for Input/Symbol[3]->symbol-ref: s
+getXMLAttribute: seeking for Input/Symbol[4]->symbol-ref: H
+getXMLAttribute: seeking for Input/Symbol[5]->symbol-ref: p.phi
+getXMLAttribute: seeking for Restriction/Slice->value .. not found
+getXMLAttribute: seeking for Restriction/Slice->axis .. not found
+getXMLAttribute: seeking for Restriction/Celltype->celltype .. not found
+getXMLAttribute: seeking for Restriction/Cells->cell-ids .. not found
+getXMLAttribute: seeking for Restriction->domain-only .. not found
+getXMLAttribute: seeking for Restriction->condition .. not found
+getXMLAttribute: seeking for Input->force-node-granularity .. not found
+getXMLAttribute: seeking for Input->include-boundary .. not found
+getXMLAttribute: seeking for Restriction->exclude-medium .. not found
+getXMLAttribute: seeking for Output/TextOutput->header .. not found
+getXMLAttribute: seeking for Output/TextOutput->header-guarding .. not found
+getXMLAttribute: seeking for Output/TextOutput->separator .. not found
+getXMLAttribute: seeking for Output/TextOutput->file-name .. not found
+getXMLAttribute: seeking for Output/TextOutput->file-numbering .. not found
+getXMLAttribute: seeking for Output/TextOutput->file-separation .. not found
+getXMLAttribute: seeking for Output/TextOutput->file-format .. not found
+getXMLAttribute: seeking for Plots/Plot[0]->time-step: 1
+getXMLAttribute: seeking for Plots/Plot[0]->title .. not found
+getXMLAttribute: seeking for Plots/Plot[0]->log-commands .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Terminal->terminal: png
+getXMLAttribute: seeking for Plots/Plot[0]/Terminal->plot-size .. not found
+getXMLAttribute: seeking for Plots/Plot[0]->file-numbering .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Range/Time->mode: current
+getXMLAttribute: seeking for Plots/Plot[0]/Range/Time->history .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Range/Data->first-line .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Range/Data->last-line .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Range/Data->increment .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Style->style: points
+getXMLAttribute: seeking for Plots/Plot[0]/Style->decorate .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Style->point-size .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Style->line-width .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Style->grid .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/X-axis/Symbol->symbol-ref: m.phi
+getXMLAttribute: seeking for Plots/Plot[0]/X-axis->minimum .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/X-axis->maximum: 6.283
+getXMLAttribute: seeking for Plots/Plot[0]/X-axis->logarithmic .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Y-axis/Symbol[0]->symbol-ref: A
+getXMLAttribute: seeking for Plots/Plot[0]/Y-axis/Symbol[1]->symbol-ref: B
+getXMLAttribute: seeking for Plots/Plot[0]/Y-axis/Symbol[2]->symbol-ref: s
+getXMLAttribute: seeking for Plots/Plot[0]/Y-axis/Symbol[3]->symbol-ref: H
+getXMLAttribute: seeking for Plots/Plot[0]/Y-axis/Symbol[4]->symbol-ref: P3
+getXMLAttribute: seeking for Plots/Plot[0]/Y-axis/Symbol[5]->symbol-ref .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Y-axis/Symbol[6]->symbol-ref .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Y-axis/Symbol[7]->symbol-ref .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Y-axis/Symbol[8]->symbol-ref .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Y-axis/Symbol[9]->symbol-ref .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Y-axis->minimum: 0.0
+getXMLAttribute: seeking for Plots/Plot[0]/Y-axis->maximum: 3
+getXMLAttribute: seeking for Plots/Plot[0]/Y-axis->logarithmic .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Color-bar/Symbol->symbol-ref .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Color-bar->minimum .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Color-bar->maximum .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Color-bar->logarithmic .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Color-bar->palette .. not found
+getXMLAttribute: seeking for Plots/Plot[0]/Color-bar->reverse-palette .. not found
+getXMLAttribute: seeking for Logger->time-step: 10
+getXMLAttribute: seeking for ModelGraph->format: dot
+getXMLAttribute: seeking for ModelGraph->reduced: false
+getXMLAttribute: seeking for ModelGraph->exclude-symbols .. not found
+getXMLAttribute: seeking for ModelGraph->include-tags: #untagged
+getXMLAttribute: seeking for Gnuplotter->file-numbering .. not found
+getXMLAttribute: seeking for Terminal->name: png
+getXMLAttribute: seeking for Terminal->size .. not found
+getXMLAttribute: seeking for Gnuplotter->time-step: 10
+getXMLAttribute: seeking for Cells->value: cell.type
+getXMLAttribute: seeking for Field->symbol-ref: U
+getXMLAttribute: seeking for Field->coarsening .. not found
+getXMLAttribute: seeking for Field->min .. not found
+getXMLAttribute: seeking for Field->max .. not found
+getXMLAttribute: seeking for Field->isolines .. not found
+getXMLAttribute: seeking for Field->surface .. not found
+Scope: Creating Accessor for symbol 'A' from Scope root
+Scope: Creating Accessor for symbol 'p' from Scope root
+Scope: Creating Accessor for symbol 'U' from Scope root
+Scope: Creating Accessor for symbol 'cell.center' from Scope root
+FORMAT: 0
+CellTracker: writing ISBI 2012 XMl Format
+Scope: Creating Accessor for symbol 'm.phi' from Scope root
+Scope: Creating Accessor for symbol 'A' from Scope root
+Scope: Creating Accessor for symbol 'B' from Scope root
+Scope: Creating Accessor for symbol 's' from Scope root
+Scope: Creating Accessor for symbol 'H' from Scope root
+Scope: Creating Accessor for symbol 'p.phi' from Scope root
+Plugin Logger: Registered input symbol dependencies A [root] ,B [root] ,s [root] ,H [root] ,m.phi [root] ,p.phi [root] ,
+Logger range:
+-> size 500
+-> dataAxes CELL, MEM_X, 
+-> data.sizes: 500, 
+-> file separation: None
+Logger range:
+-> size 500
+-> dataAxes CELL, MEM_X, 
+-> data.sizes: 500, 
+-> file separation: CELL
+Scope: Creating Accessor for symbol 'time' from Scope root
+Scope: Creating Accessor for symbol 'cell.id' from Scope CellType[cells]
+Scope: Creating Accessor for symbol 'm.phi' from Scope root
+Scope: Creating Accessor for symbol 'P3' from Scope CellType[cells]
+Scope: Creating Accessor for symbol 'cell.type' from Scope root
+Scope: Creating Accessor for symbol 'U' from Scope root
+System
+Mapper
+Protrusion
+Event
+Mapper
+System
+Mapper
+CPM
+Gnuplotter
+CellTracker
+Logger
+ModelGraph
+Gnuplotter
+
+ TimeStepListener "System" propagates its time step 0.01
+
+ TimeStepListener "Mapper" propagates its time step 0.01
+
+ TimeStepListener "Protrusion" propagates its time step 0.3
+
+ TimeStepListener "Event" propagates its time step 0.01
+
+ TimeStepListener "System" propagates its time step 0.01
+
+ TimeStepListener "CPM" propagates its time step 0.3
+
+ TimeStepListener "Gnuplotter" propagates its time step 10
+
+ TimeStepListener "CellTracker" propagates its time step 1
+
+ TimeStepListener "Logger" propagates its time step 10
+
+ TimeStepListener "ModelGraph" propagates its time step 6000
+
+ TimeStepListener "Gnuplotter" propagates its time step 10
+TimeScheduler::init: Ordering instantaneous processes for sequential update ...
+ 
+======================================================
+ Time Schedule
+======================================================
+ Time precision patch is 1e-05
+
+=====|    Phase I     |===============================
+-----. CPM .------------------------------------
+  + 0.3 => CPM [A,prot] -> [cell.center,cell.length,cell.surface,cell.type,cell.volume]
+-----. Reactions .------------------------------------
+  + 0.01 => System [WavePinning with Inhibitor] [H,K,T,delta,gamma,k_0,k_1,n,s,s_1] -> [A,B,H,P2,P3,rate1]
+  + 0.01 => System [cell.surface] -> [T]
+
+=====|    Phase II    |===============================
+-----. Reporters and Instantaneous Processes.---------
+  + 0.01 => Mapper [Polarity extraction from membrane] [A,cell.center] -> [p]
+  + 0.3 => Protrusion [prot] -> [prot]
+  + 0.01 => Event [p.phi,time,ts2] -> [ts3]
+  + -1 => Mapper [Polarity extraction from membrane] [U,cell.center] -> [p1]
+  + 0.3 => Mapper [Sensing the field] [U,cell.center] -> [s]
+
+=====|    Phase III   |===============================
+-----. Analysis .-------------------------------------
+  + 10 => Gnuplotter [A,U,p] 
+  + 1 => CellTracker [cell.center] 
+  + 10 => Logger [A,B,H,P3,m.phi,p.phi,s] 
+  + 6000 => ModelGraph [] 
+  + 10 => Gnuplotter [U,cell.type] 
+------------------------------------------------------
+======================================================
+
+model is up
+GnuPlotter: Saving plot-1_00000.png
+GnuPlotter: Saving plot-2_00000.png
+Time: 0.00 atu
+GnuPlotter: Saving plot-1_00010.png
+GnuPlotter: Saving plot-2_00010.png
+GnuPlotter: Saving plot-1_00020.png
+GnuPlotter: Saving plot-2_00020.png
+GnuPlotter: Saving plot-1_00030.png
+GnuPlotter: Saving plot-2_00030.png
+GnuPlotter: Saving plot-1_00040.png
+GnuPlotter: Saving plot-2_00040.png
+GnuPlotter: Saving plot-1_00050.png
+GnuPlotter: Saving plot-2_00050.png
+GnuPlotter: Saving plot-1_00060.png
+GnuPlotter: Saving plot-2_00060.png
+Time: 60 
+GnuPlotter: Saving plot-1_00070.png
+GnuPlotter: Saving plot-2_00070.png
+GnuPlotter: Saving plot-1_00080.png
+GnuPlotter: Saving plot-2_00080.png
+GnuPlotter: Saving plot-1_00090.png
+GnuPlotter: Saving plot-2_00090.png
+GnuPlotter: Saving plot-1_00100.png
+GnuPlotter: Saving plot-2_00100.png
+GnuPlotter: Saving plot-1_00110.png
+GnuPlotter: Saving plot-2_00110.png
+GnuPlotter: Saving plot-1_00120.png
+GnuPlotter: Saving plot-2_00120.png
+Time: 120 
+GnuPlotter: Saving plot-1_00130.png
+GnuPlotter: Saving plot-2_00130.png
+GnuPlotter: Saving plot-1_00140.png
+GnuPlotter: Saving plot-2_00140.png
+GnuPlotter: Saving plot-1_00150.png
+GnuPlotter: Saving plot-2_00150.png
+GnuPlotter: Saving plot-1_00160.png
+GnuPlotter: Saving plot-2_00160.png
+GnuPlotter: Saving plot-1_00170.png
+GnuPlotter: Saving plot-2_00170.png
+GnuPlotter: Saving plot-1_00180.png
+GnuPlotter: Saving plot-2_00180.png
+Time: 180 
+GnuPlotter: Saving plot-1_00190.png
+GnuPlotter: Saving plot-2_00190.png
+GnuPlotter: Saving plot-1_00200.png
+GnuPlotter: Saving plot-2_00200.png
+GnuPlotter: Saving plot-1_00210.png
+GnuPlotter: Saving plot-2_00210.png
+GnuPlotter: Saving plot-1_00220.png
+GnuPlotter: Saving plot-2_00220.png
+GnuPlotter: Saving plot-1_00230.png
+GnuPlotter: Saving plot-2_00230.png
+GnuPlotter: Saving plot-1_00240.png
+GnuPlotter: Saving plot-2_00240.png
+Time: 240 
+GnuPlotter: Saving plot-1_00250.png
+GnuPlotter: Saving plot-2_00250.png
+GnuPlotter: Saving plot-1_00260.png
+GnuPlotter: Saving plot-2_00260.png
+GnuPlotter: Saving plot-1_00270.png
+GnuPlotter: Saving plot-2_00270.png
+GnuPlotter: Saving plot-1_00280.png
+GnuPlotter: Saving plot-2_00280.png
+GnuPlotter: Saving plot-1_00290.png
+GnuPlotter: Saving plot-2_00290.png
+GnuPlotter: Saving plot-1_00300.png
+GnuPlotter: Saving plot-2_00300.png
+Time: 300 
+GnuPlotter: Saving plot-1_00310.png
+GnuPlotter: Saving plot-2_00310.png
+GnuPlotter: Saving plot-1_00320.png
+GnuPlotter: Saving plot-2_00320.png
+GnuPlotter: Saving plot-1_00330.png
+GnuPlotter: Saving plot-2_00330.png
+GnuPlotter: Saving plot-1_00340.png
+GnuPlotter: Saving plot-2_00340.png
+GnuPlotter: Saving plot-1_00350.png
+GnuPlotter: Saving plot-2_00350.png
+GnuPlotter: Saving plot-1_00360.png
+GnuPlotter: Saving plot-2_00360.png
+Time: 360 
+GnuPlotter: Saving plot-1_00370.png
+GnuPlotter: Saving plot-2_00370.png
+GnuPlotter: Saving plot-1_00380.png
+GnuPlotter: Saving plot-2_00380.png
+GnuPlotter: Saving plot-1_00390.png
+GnuPlotter: Saving plot-2_00390.png
+GnuPlotter: Saving plot-1_00400.png
+GnuPlotter: Saving plot-2_00400.png
+GnuPlotter: Saving plot-1_00410.png
+GnuPlotter: Saving plot-2_00410.png
+GnuPlotter: Saving plot-1_00420.png
+GnuPlotter: Saving plot-2_00420.png
+Time: 420 
+GnuPlotter: Saving plot-1_00430.png
+GnuPlotter: Saving plot-2_00430.png
+GnuPlotter: Saving plot-1_00440.png
+GnuPlotter: Saving plot-2_00440.png
+GnuPlotter: Saving plot-1_00450.png
+GnuPlotter: Saving plot-2_00450.png
+GnuPlotter: Saving plot-1_00460.png
+GnuPlotter: Saving plot-2_00460.png
+GnuPlotter: Saving plot-1_00470.png
+GnuPlotter: Saving plot-2_00470.png
+GnuPlotter: Saving plot-1_00480.png
+GnuPlotter: Saving plot-2_00480.png
+Time: 480 
+GnuPlotter: Saving plot-1_00490.png
+GnuPlotter: Saving plot-2_00490.png
+GnuPlotter: Saving plot-1_00500.png
+GnuPlotter: Saving plot-2_00500.png
+GnuPlotter: Saving plot-1_00510.png
+GnuPlotter: Saving plot-2_00510.png
+GnuPlotter: Saving plot-1_00520.png
+GnuPlotter: Saving plot-2_00520.png
+GnuPlotter: Saving plot-1_00530.png
+GnuPlotter: Saving plot-2_00530.png
+GnuPlotter: Saving plot-1_00540.png
+GnuPlotter: Saving plot-2_00540.png
+Time: 540 
+GnuPlotter: Saving plot-1_00550.png
+GnuPlotter: Saving plot-2_00550.png
+GnuPlotter: Saving plot-1_00560.png
+GnuPlotter: Saving plot-2_00560.png
+GnuPlotter: Saving plot-1_00570.png
+GnuPlotter: Saving plot-2_00570.png
+GnuPlotter: Saving plot-1_00580.png
+GnuPlotter: Saving plot-2_00580.png
+GnuPlotter: Saving plot-1_00590.png
+GnuPlotter: Saving plot-2_00590.png
+GnuPlotter: Saving plot-1_00600.png
+GnuPlotter: Saving plot-2_00600.png
+Time: 600 
+GnuPlotter: Saving plot-1_00610.png
+GnuPlotter: Saving plot-2_00610.png
+GnuPlotter: Saving plot-1_00620.png
+GnuPlotter: Saving plot-2_00620.png
+GnuPlotter: Saving plot-1_00630.png
+GnuPlotter: Saving plot-2_00630.png
+GnuPlotter: Saving plot-1_00640.png
+GnuPlotter: Saving plot-2_00640.png
+GnuPlotter: Saving plot-1_00650.png
+GnuPlotter: Saving plot-2_00650.png
+GnuPlotter: Saving plot-1_00660.png
+GnuPlotter: Saving plot-2_00660.png
+Time: 660 
+GnuPlotter: Saving plot-1_00670.png
+GnuPlotter: Saving plot-2_00670.png
+GnuPlotter: Saving plot-1_00680.png
+GnuPlotter: Saving plot-2_00680.png
+GnuPlotter: Saving plot-1_00690.png
+GnuPlotter: Saving plot-2_00690.png
+GnuPlotter: Saving plot-1_00700.png
+GnuPlotter: Saving plot-2_00700.png
+GnuPlotter: Saving plot-1_00710.png
+GnuPlotter: Saving plot-2_00710.png
+GnuPlotter: Saving plot-1_00720.png
+GnuPlotter: Saving plot-2_00720.png
+Time: 720 
+GnuPlotter: Saving plot-1_00730.png
+GnuPlotter: Saving plot-2_00730.png
+GnuPlotter: Saving plot-1_00740.png
+GnuPlotter: Saving plot-2_00740.png
+GnuPlotter: Saving plot-1_00750.png
+GnuPlotter: Saving plot-2_00750.png
+GnuPlotter: Saving plot-1_00760.png
+GnuPlotter: Saving plot-2_00760.png
+GnuPlotter: Saving plot-1_00770.png
+GnuPlotter: Saving plot-2_00770.png
+GnuPlotter: Saving plot-1_00780.png
+GnuPlotter: Saving plot-2_00780.png
+Time: 780 
+GnuPlotter: Saving plot-1_00790.png
+GnuPlotter: Saving plot-2_00790.png
+GnuPlotter: Saving plot-1_00800.png
+GnuPlotter: Saving plot-2_00800.png
+GnuPlotter: Saving plot-1_00810.png
+GnuPlotter: Saving plot-2_00810.png
+GnuPlotter: Saving plot-1_00820.png
+GnuPlotter: Saving plot-2_00820.png
+GnuPlotter: Saving plot-1_00830.png
+GnuPlotter: Saving plot-2_00830.png
+GnuPlotter: Saving plot-1_00840.png
+GnuPlotter: Saving plot-2_00840.png
+Time: 840 
+GnuPlotter: Saving plot-1_00850.png
+GnuPlotter: Saving plot-2_00850.png
+GnuPlotter: Saving plot-1_00860.png
+GnuPlotter: Saving plot-2_00860.png
+GnuPlotter: Saving plot-1_00870.png
+GnuPlotter: Saving plot-2_00870.png
+GnuPlotter: Saving plot-1_00880.png
+GnuPlotter: Saving plot-2_00880.png
+GnuPlotter: Saving plot-1_00890.png
+GnuPlotter: Saving plot-2_00890.png
+GnuPlotter: Saving plot-1_00900.png
+GnuPlotter: Saving plot-2_00900.png
+Time: 900 
+GnuPlotter: Saving plot-1_00910.png
+GnuPlotter: Saving plot-2_00910.png
+GnuPlotter: Saving plot-1_00920.png
+GnuPlotter: Saving plot-2_00920.png
+GnuPlotter: Saving plot-1_00930.png
+GnuPlotter: Saving plot-2_00930.png
+GnuPlotter: Saving plot-1_00940.png
+GnuPlotter: Saving plot-2_00940.png
+GnuPlotter: Saving plot-1_00950.png
+GnuPlotter: Saving plot-2_00950.png
+GnuPlotter: Saving plot-1_00960.png
+GnuPlotter: Saving plot-2_00960.png
+Time: 960 
+GnuPlotter: Saving plot-1_00970.png
+GnuPlotter: Saving plot-2_00970.png
+GnuPlotter: Saving plot-1_00980.png
+GnuPlotter: Saving plot-2_00980.png
+GnuPlotter: Saving plot-1_00990.png
+GnuPlotter: Saving plot-2_00990.png
+GnuPlotter: Saving plot-1_01000.png
+GnuPlotter: Saving plot-2_01000.png
+GnuPlotter: Saving plot-1_01010.png
+GnuPlotter: Saving plot-2_01010.png
+GnuPlotter: Saving plot-1_01020.png
+GnuPlotter: Saving plot-2_01020.png
+Time: 1020 
+GnuPlotter: Saving plot-1_01030.png
+GnuPlotter: Saving plot-2_01030.png
+GnuPlotter: Saving plot-1_01040.png
+GnuPlotter: Saving plot-2_01040.png
+GnuPlotter: Saving plot-1_01050.png
+GnuPlotter: Saving plot-2_01050.png
+GnuPlotter: Saving plot-1_01060.png
+GnuPlotter: Saving plot-2_01060.png
+GnuPlotter: Saving plot-1_01070.png
+GnuPlotter: Saving plot-2_01070.png
+GnuPlotter: Saving plot-1_01080.png
+GnuPlotter: Saving plot-2_01080.png
+Time: 1080 
+GnuPlotter: Saving plot-1_01090.png
+GnuPlotter: Saving plot-2_01090.png
+GnuPlotter: Saving plot-1_01100.png
+GnuPlotter: Saving plot-2_01100.png
+GnuPlotter: Saving plot-1_01110.png
+GnuPlotter: Saving plot-2_01110.png
+GnuPlotter: Saving plot-1_01120.png
+GnuPlotter: Saving plot-2_01120.png
+GnuPlotter: Saving plot-1_01130.png
+GnuPlotter: Saving plot-2_01130.png
+GnuPlotter: Saving plot-1_01140.png
+GnuPlotter: Saving plot-2_01140.png
+Time: 1140 
+GnuPlotter: Saving plot-1_01150.png
+GnuPlotter: Saving plot-2_01150.png
+GnuPlotter: Saving plot-1_01160.png
+GnuPlotter: Saving plot-2_01160.png
+GnuPlotter: Saving plot-1_01170.png
+GnuPlotter: Saving plot-2_01170.png
+GnuPlotter: Saving plot-1_01180.png
+GnuPlotter: Saving plot-2_01180.png
+GnuPlotter: Saving plot-1_01190.png
+GnuPlotter: Saving plot-2_01190.png
+GnuPlotter: Saving plot-1_01200.png
+GnuPlotter: Saving plot-2_01200.png
+Time: 1200 
+GnuPlotter: Saving plot-1_01210.png
+GnuPlotter: Saving plot-2_01210.png
+GnuPlotter: Saving plot-1_01220.png
+GnuPlotter: Saving plot-2_01220.png
+GnuPlotter: Saving plot-1_01230.png
+GnuPlotter: Saving plot-2_01230.png
+GnuPlotter: Saving plot-1_01240.png
+GnuPlotter: Saving plot-2_01240.png
+GnuPlotter: Saving plot-1_01250.png
+GnuPlotter: Saving plot-2_01250.png
+GnuPlotter: Saving plot-1_01260.png
+GnuPlotter: Saving plot-2_01260.png
+Time: 1260 
+GnuPlotter: Saving plot-1_01270.png
+GnuPlotter: Saving plot-2_01270.png
+GnuPlotter: Saving plot-1_01280.png
+GnuPlotter: Saving plot-2_01280.png
+GnuPlotter: Saving plot-1_01290.png
+GnuPlotter: Saving plot-2_01290.png
+GnuPlotter: Saving plot-1_01300.png
+GnuPlotter: Saving plot-2_01300.png
+GnuPlotter: Saving plot-1_01310.png
+GnuPlotter: Saving plot-2_01310.png
+GnuPlotter: Saving plot-1_01320.png
+GnuPlotter: Saving plot-2_01320.png
+Time: 1320 
+GnuPlotter: Saving plot-1_01330.png
+GnuPlotter: Saving plot-2_01330.png
+GnuPlotter: Saving plot-1_01340.png
+GnuPlotter: Saving plot-2_01340.png
+GnuPlotter: Saving plot-1_01350.png
+GnuPlotter: Saving plot-2_01350.png
+GnuPlotter: Saving plot-1_01360.png
+GnuPlotter: Saving plot-2_01360.png
+GnuPlotter: Saving plot-1_01370.png
+GnuPlotter: Saving plot-2_01370.png
+GnuPlotter: Saving plot-1_01380.png
+GnuPlotter: Saving plot-2_01380.png
+Time: 1380 
+GnuPlotter: Saving plot-1_01390.png
+GnuPlotter: Saving plot-2_01390.png
+GnuPlotter: Saving plot-1_01400.png
+GnuPlotter: Saving plot-2_01400.png
+GnuPlotter: Saving plot-1_01410.png
+GnuPlotter: Saving plot-2_01410.png
+GnuPlotter: Saving plot-1_01420.png
+GnuPlotter: Saving plot-2_01420.png
+GnuPlotter: Saving plot-1_01430.png
+GnuPlotter: Saving plot-2_01430.png
+GnuPlotter: Saving plot-1_01440.png
+GnuPlotter: Saving plot-2_01440.png
+Time: 1440 
+GnuPlotter: Saving plot-1_01450.png
+GnuPlotter: Saving plot-2_01450.png
+GnuPlotter: Saving plot-1_01460.png
+GnuPlotter: Saving plot-2_01460.png
+GnuPlotter: Saving plot-1_01470.png
+GnuPlotter: Saving plot-2_01470.png
+GnuPlotter: Saving plot-1_01480.png
+GnuPlotter: Saving plot-2_01480.png
+GnuPlotter: Saving plot-1_01490.png
+GnuPlotter: Saving plot-2_01490.png
+GnuPlotter: Saving plot-1_01500.png
+GnuPlotter: Saving plot-2_01500.png
+Time: 1500 
+GnuPlotter: Saving plot-1_01510.png
+GnuPlotter: Saving plot-2_01510.png
+GnuPlotter: Saving plot-1_01520.png
+GnuPlotter: Saving plot-2_01520.png
+GnuPlotter: Saving plot-1_01530.png
+GnuPlotter: Saving plot-2_01530.png
+GnuPlotter: Saving plot-1_01540.png
+GnuPlotter: Saving plot-2_01540.png
+GnuPlotter: Saving plot-1_01550.png
+GnuPlotter: Saving plot-2_01550.png
+GnuPlotter: Saving plot-1_01560.png
+GnuPlotter: Saving plot-2_01560.png
+Time: 1560 
+GnuPlotter: Saving plot-1_01570.png
+GnuPlotter: Saving plot-2_01570.png
+GnuPlotter: Saving plot-1_01580.png
+GnuPlotter: Saving plot-2_01580.png
+GnuPlotter: Saving plot-1_01590.png
+GnuPlotter: Saving plot-2_01590.png
+GnuPlotter: Saving plot-1_01600.png
+GnuPlotter: Saving plot-2_01600.png
+GnuPlotter: Saving plot-1_01610.png
+GnuPlotter: Saving plot-2_01610.png
+GnuPlotter: Saving plot-1_01620.png
+GnuPlotter: Saving plot-2_01620.png
+Time: 1620 
+GnuPlotter: Saving plot-1_01630.png
+GnuPlotter: Saving plot-2_01630.png
+GnuPlotter: Saving plot-1_01640.png
+GnuPlotter: Saving plot-2_01640.png
+GnuPlotter: Saving plot-1_01650.png
+GnuPlotter: Saving plot-2_01650.png
+GnuPlotter: Saving plot-1_01660.png
+GnuPlotter: Saving plot-2_01660.png
+GnuPlotter: Saving plot-1_01670.png
+GnuPlotter: Saving plot-2_01670.png
+GnuPlotter: Saving plot-1_01680.png
+GnuPlotter: Saving plot-2_01680.png
+Time: 1680 
+GnuPlotter: Saving plot-1_01690.png
+GnuPlotter: Saving plot-2_01690.png
+GnuPlotter: Saving plot-1_01700.png
+GnuPlotter: Saving plot-2_01700.png
+GnuPlotter: Saving plot-1_01710.png
+GnuPlotter: Saving plot-2_01710.png
+GnuPlotter: Saving plot-1_01720.png
+GnuPlotter: Saving plot-2_01720.png
+GnuPlotter: Saving plot-1_01730.png
+GnuPlotter: Saving plot-2_01730.png
+GnuPlotter: Saving plot-1_01740.png
+GnuPlotter: Saving plot-2_01740.png
+Time: 1740 
+GnuPlotter: Saving plot-1_01750.png
+GnuPlotter: Saving plot-2_01750.png
+GnuPlotter: Saving plot-1_01760.png
+GnuPlotter: Saving plot-2_01760.png
+GnuPlotter: Saving plot-1_01770.png
+GnuPlotter: Saving plot-2_01770.png
+GnuPlotter: Saving plot-1_01780.png
+GnuPlotter: Saving plot-2_01780.png
+GnuPlotter: Saving plot-1_01790.png
+GnuPlotter: Saving plot-2_01790.png
+GnuPlotter: Saving plot-1_01800.png
+GnuPlotter: Saving plot-2_01800.png
+Time: 1800 
+GnuPlotter: Saving plot-1_01810.png
+GnuPlotter: Saving plot-2_01810.png
+GnuPlotter: Saving plot-1_01820.png
+GnuPlotter: Saving plot-2_01820.png
+GnuPlotter: Saving plot-1_01830.png
+GnuPlotter: Saving plot-2_01830.png
+GnuPlotter: Saving plot-1_01840.png
+GnuPlotter: Saving plot-2_01840.png
+GnuPlotter: Saving plot-1_01850.png
+GnuPlotter: Saving plot-2_01850.png
+GnuPlotter: Saving plot-1_01860.png
+GnuPlotter: Saving plot-2_01860.png
+Time: 1860 
+GnuPlotter: Saving plot-1_01870.png
+GnuPlotter: Saving plot-2_01870.png
+GnuPlotter: Saving plot-1_01880.png
+GnuPlotter: Saving plot-2_01880.png
+GnuPlotter: Saving plot-1_01890.png
+GnuPlotter: Saving plot-2_01890.png
+GnuPlotter: Saving plot-1_01900.png
+GnuPlotter: Saving plot-2_01900.png
+GnuPlotter: Saving plot-1_01910.png
+GnuPlotter: Saving plot-2_01910.png
+GnuPlotter: Saving plot-1_01920.png
+GnuPlotter: Saving plot-2_01920.png
+Time: 1920 
+GnuPlotter: Saving plot-1_01930.png
+GnuPlotter: Saving plot-2_01930.png
+GnuPlotter: Saving plot-1_01940.png
+GnuPlotter: Saving plot-2_01940.png
+GnuPlotter: Saving plot-1_01950.png
+GnuPlotter: Saving plot-2_01950.png
+GnuPlotter: Saving plot-1_01960.png
+GnuPlotter: Saving plot-2_01960.png
+GnuPlotter: Saving plot-1_01970.png
+GnuPlotter: Saving plot-2_01970.png
+GnuPlotter: Saving plot-1_01980.png
+GnuPlotter: Saving plot-2_01980.png
+Time: 1980 
+GnuPlotter: Saving plot-1_01990.png
+GnuPlotter: Saving plot-2_01990.png
+GnuPlotter: Saving plot-1_02000.png
+GnuPlotter: Saving plot-2_02000.png
+GnuPlotter: Saving plot-1_02010.png
+GnuPlotter: Saving plot-2_02010.png
+GnuPlotter: Saving plot-1_02020.png
+GnuPlotter: Saving plot-2_02020.png
+GnuPlotter: Saving plot-1_02030.png
+GnuPlotter: Saving plot-2_02030.png
+GnuPlotter: Saving plot-1_02040.png
+GnuPlotter: Saving plot-2_02040.png
+Time: 2040 
+GnuPlotter: Saving plot-1_02050.png
+GnuPlotter: Saving plot-2_02050.png
+GnuPlotter: Saving plot-1_02060.png
+GnuPlotter: Saving plot-2_02060.png
+GnuPlotter: Saving plot-1_02070.png
+GnuPlotter: Saving plot-2_02070.png
+GnuPlotter: Saving plot-1_02080.png
+GnuPlotter: Saving plot-2_02080.png
+GnuPlotter: Saving plot-1_02090.png
+GnuPlotter: Saving plot-2_02090.png
+GnuPlotter: Saving plot-1_02100.png
+GnuPlotter: Saving plot-2_02100.png
+Time: 2100 
+GnuPlotter: Saving plot-1_02110.png
+GnuPlotter: Saving plot-2_02110.png
+GnuPlotter: Saving plot-1_02120.png
+GnuPlotter: Saving plot-2_02120.png
+GnuPlotter: Saving plot-1_02130.png
+GnuPlotter: Saving plot-2_02130.png
+GnuPlotter: Saving plot-1_02140.png
+GnuPlotter: Saving plot-2_02140.png
+GnuPlotter: Saving plot-1_02150.png
+GnuPlotter: Saving plot-2_02150.png
+GnuPlotter: Saving plot-1_02160.png
+GnuPlotter: Saving plot-2_02160.png
+Time: 2160 
+GnuPlotter: Saving plot-1_02170.png
+GnuPlotter: Saving plot-2_02170.png
+GnuPlotter: Saving plot-1_02180.png
+GnuPlotter: Saving plot-2_02180.png
+GnuPlotter: Saving plot-1_02190.png
+GnuPlotter: Saving plot-2_02190.png
+GnuPlotter: Saving plot-1_02200.png
+GnuPlotter: Saving plot-2_02200.png
+GnuPlotter: Saving plot-1_02210.png
+GnuPlotter: Saving plot-2_02210.png
+GnuPlotter: Saving plot-1_02220.png
+GnuPlotter: Saving plot-2_02220.png
+Time: 2220 
+GnuPlotter: Saving plot-1_02230.png
+GnuPlotter: Saving plot-2_02230.png
+GnuPlotter: Saving plot-1_02240.png
+GnuPlotter: Saving plot-2_02240.png
+GnuPlotter: Saving plot-1_02250.png
+GnuPlotter: Saving plot-2_02250.png
+GnuPlotter: Saving plot-1_02260.png
+GnuPlotter: Saving plot-2_02260.png
+GnuPlotter: Saving plot-1_02270.png
+GnuPlotter: Saving plot-2_02270.png
+GnuPlotter: Saving plot-1_02280.png
+GnuPlotter: Saving plot-2_02280.png
+Time: 2280 
+GnuPlotter: Saving plot-1_02290.png
+GnuPlotter: Saving plot-2_02290.png
+GnuPlotter: Saving plot-1_02300.png
+GnuPlotter: Saving plot-2_02300.png
+GnuPlotter: Saving plot-1_02310.png
+GnuPlotter: Saving plot-2_02310.png
+GnuPlotter: Saving plot-1_02320.png
+GnuPlotter: Saving plot-2_02320.png
+GnuPlotter: Saving plot-1_02330.png
+GnuPlotter: Saving plot-2_02330.png
+GnuPlotter: Saving plot-1_02340.png
+GnuPlotter: Saving plot-2_02340.png
+Time: 2340 
+GnuPlotter: Saving plot-1_02350.png
+GnuPlotter: Saving plot-2_02350.png
+GnuPlotter: Saving plot-1_02360.png
+GnuPlotter: Saving plot-2_02360.png
+GnuPlotter: Saving plot-1_02370.png
+GnuPlotter: Saving plot-2_02370.png
+GnuPlotter: Saving plot-1_02380.png
+GnuPlotter: Saving plot-2_02380.png
+GnuPlotter: Saving plot-1_02390.png
+GnuPlotter: Saving plot-2_02390.png
+GnuPlotter: Saving plot-1_02400.png
+GnuPlotter: Saving plot-2_02400.png
+Time: 2400 
+GnuPlotter: Saving plot-1_02410.png
+GnuPlotter: Saving plot-2_02410.png
+GnuPlotter: Saving plot-1_02420.png
+GnuPlotter: Saving plot-2_02420.png
+GnuPlotter: Saving plot-1_02430.png
+GnuPlotter: Saving plot-2_02430.png
+GnuPlotter: Saving plot-1_02440.png
+GnuPlotter: Saving plot-2_02440.png
+GnuPlotter: Saving plot-1_02450.png
+GnuPlotter: Saving plot-2_02450.png
+GnuPlotter: Saving plot-1_02460.png
+GnuPlotter: Saving plot-2_02460.png
+Time: 2460 
+GnuPlotter: Saving plot-1_02470.png
+GnuPlotter: Saving plot-2_02470.png
+GnuPlotter: Saving plot-1_02480.png
+GnuPlotter: Saving plot-2_02480.png
+GnuPlotter: Saving plot-1_02490.png
+GnuPlotter: Saving plot-2_02490.png
+GnuPlotter: Saving plot-1_02500.png
+GnuPlotter: Saving plot-2_02500.png
+GnuPlotter: Saving plot-1_02510.png
+GnuPlotter: Saving plot-2_02510.png
+GnuPlotter: Saving plot-1_02520.png
+GnuPlotter: Saving plot-2_02520.png
+Time: 2520 
+GnuPlotter: Saving plot-1_02530.png
+GnuPlotter: Saving plot-2_02530.png
+GnuPlotter: Saving plot-1_02540.png
+GnuPlotter: Saving plot-2_02540.png
+GnuPlotter: Saving plot-1_02550.png
+GnuPlotter: Saving plot-2_02550.png
+GnuPlotter: Saving plot-1_02560.png
+GnuPlotter: Saving plot-2_02560.png
+GnuPlotter: Saving plot-1_02570.png
+GnuPlotter: Saving plot-2_02570.png
+GnuPlotter: Saving plot-1_02580.png
+GnuPlotter: Saving plot-2_02580.png
+Time: 2580 
+GnuPlotter: Saving plot-1_02590.png
+GnuPlotter: Saving plot-2_02590.png
+GnuPlotter: Saving plot-1_02600.png
+GnuPlotter: Saving plot-2_02600.png
+GnuPlotter: Saving plot-1_02610.png
+GnuPlotter: Saving plot-2_02610.png
+GnuPlotter: Saving plot-1_02620.png
+GnuPlotter: Saving plot-2_02620.png
+GnuPlotter: Saving plot-1_02630.png
+GnuPlotter: Saving plot-2_02630.png
+GnuPlotter: Saving plot-1_02640.png
+GnuPlotter: Saving plot-2_02640.png
+Time: 2640 
+GnuPlotter: Saving plot-1_02650.png
+GnuPlotter: Saving plot-2_02650.png
+GnuPlotter: Saving plot-1_02660.png
+GnuPlotter: Saving plot-2_02660.png
+GnuPlotter: Saving plot-1_02670.png
+GnuPlotter: Saving plot-2_02670.png
+GnuPlotter: Saving plot-1_02680.png
+GnuPlotter: Saving plot-2_02680.png
+GnuPlotter: Saving plot-1_02690.png
+GnuPlotter: Saving plot-2_02690.png
+GnuPlotter: Saving plot-1_02700.png
+GnuPlotter: Saving plot-2_02700.png
+Time: 2700 
+GnuPlotter: Saving plot-1_02710.png
+GnuPlotter: Saving plot-2_02710.png
+GnuPlotter: Saving plot-1_02720.png
+GnuPlotter: Saving plot-2_02720.png
+GnuPlotter: Saving plot-1_02730.png
+GnuPlotter: Saving plot-2_02730.png
+GnuPlotter: Saving plot-1_02740.png
+GnuPlotter: Saving plot-2_02740.png
+GnuPlotter: Saving plot-1_02750.png
+GnuPlotter: Saving plot-2_02750.png
+GnuPlotter: Saving plot-1_02760.png
+GnuPlotter: Saving plot-2_02760.png
+Time: 2760 
+GnuPlotter: Saving plot-1_02770.png
+GnuPlotter: Saving plot-2_02770.png
+GnuPlotter: Saving plot-1_02780.png
+GnuPlotter: Saving plot-2_02780.png
+GnuPlotter: Saving plot-1_02790.png
+GnuPlotter: Saving plot-2_02790.png
+GnuPlotter: Saving plot-1_02800.png
+GnuPlotter: Saving plot-2_02800.png
+GnuPlotter: Saving plot-1_02810.png
+GnuPlotter: Saving plot-2_02810.png
+GnuPlotter: Saving plot-1_02820.png
+GnuPlotter: Saving plot-2_02820.png
+Time: 2820 
+GnuPlotter: Saving plot-1_02830.png
+GnuPlotter: Saving plot-2_02830.png
+GnuPlotter: Saving plot-1_02840.png
+GnuPlotter: Saving plot-2_02840.png
+GnuPlotter: Saving plot-1_02850.png
+GnuPlotter: Saving plot-2_02850.png
+GnuPlotter: Saving plot-1_02860.png
+GnuPlotter: Saving plot-2_02860.png
+GnuPlotter: Saving plot-1_02870.png
+GnuPlotter: Saving plot-2_02870.png
+GnuPlotter: Saving plot-1_02880.png
+GnuPlotter: Saving plot-2_02880.png
+Time: 2880 
+GnuPlotter: Saving plot-1_02890.png
+GnuPlotter: Saving plot-2_02890.png
+GnuPlotter: Saving plot-1_02900.png
+GnuPlotter: Saving plot-2_02900.png
+GnuPlotter: Saving plot-1_02910.png
+GnuPlotter: Saving plot-2_02910.png
+GnuPlotter: Saving plot-1_02920.png
+GnuPlotter: Saving plot-2_02920.png
+GnuPlotter: Saving plot-1_02930.png
+GnuPlotter: Saving plot-2_02930.png
+GnuPlotter: Saving plot-1_02940.png
+GnuPlotter: Saving plot-2_02940.png
+Time: 2940 
+GnuPlotter: Saving plot-1_02950.png
+GnuPlotter: Saving plot-2_02950.png
+GnuPlotter: Saving plot-1_02960.png
+GnuPlotter: Saving plot-2_02960.png
+GnuPlotter: Saving plot-1_02970.png
+GnuPlotter: Saving plot-2_02970.png
+GnuPlotter: Saving plot-1_02980.png
+GnuPlotter: Saving plot-2_02980.png
+GnuPlotter: Saving plot-1_02990.png
+GnuPlotter: Saving plot-2_02990.png
+GnuPlotter: Saving plot-1_03000.png
+GnuPlotter: Saving plot-2_03000.png
+Time: 3000 
+GnuPlotter: Saving plot-1_03010.png
+GnuPlotter: Saving plot-2_03010.png
+GnuPlotter: Saving plot-1_03020.png
+GnuPlotter: Saving plot-2_03020.png
+GnuPlotter: Saving plot-1_03030.png
+GnuPlotter: Saving plot-2_03030.png
+GnuPlotter: Saving plot-1_03040.png
+GnuPlotter: Saving plot-2_03040.png
+GnuPlotter: Saving plot-1_03050.png
+GnuPlotter: Saving plot-2_03050.png
+GnuPlotter: Saving plot-1_03060.png
+GnuPlotter: Saving plot-2_03060.png
+Time: 3060 
+GnuPlotter: Saving plot-1_03070.png
+GnuPlotter: Saving plot-2_03070.png
+GnuPlotter: Saving plot-1_03080.png
+GnuPlotter: Saving plot-2_03080.png
+GnuPlotter: Saving plot-1_03090.png
+GnuPlotter: Saving plot-2_03090.png
+GnuPlotter: Saving plot-1_03100.png
+GnuPlotter: Saving plot-2_03100.png
+GnuPlotter: Saving plot-1_03110.png
+GnuPlotter: Saving plot-2_03110.png
+GnuPlotter: Saving plot-1_03120.png
+GnuPlotter: Saving plot-2_03120.png
+Time: 3120 
+GnuPlotter: Saving plot-1_03130.png
+GnuPlotter: Saving plot-2_03130.png
+GnuPlotter: Saving plot-1_03140.png
+GnuPlotter: Saving plot-2_03140.png
+GnuPlotter: Saving plot-1_03150.png
+GnuPlotter: Saving plot-2_03150.png
+GnuPlotter: Saving plot-1_03160.png
+GnuPlotter: Saving plot-2_03160.png
+GnuPlotter: Saving plot-1_03170.png
+GnuPlotter: Saving plot-2_03170.png
+GnuPlotter: Saving plot-1_03180.png
+GnuPlotter: Saving plot-2_03180.png
+Time: 3180 
+GnuPlotter: Saving plot-1_03190.png
+GnuPlotter: Saving plot-2_03190.png
+GnuPlotter: Saving plot-1_03200.png
+GnuPlotter: Saving plot-2_03200.png
+GnuPlotter: Saving plot-1_03210.png
+GnuPlotter: Saving plot-2_03210.png
+GnuPlotter: Saving plot-1_03220.png
+GnuPlotter: Saving plot-2_03220.png
+GnuPlotter: Saving plot-1_03230.png
+GnuPlotter: Saving plot-2_03230.png
+GnuPlotter: Saving plot-1_03240.png
+GnuPlotter: Saving plot-2_03240.png
+Time: 3240 
+GnuPlotter: Saving plot-1_03250.png
+GnuPlotter: Saving plot-2_03250.png
+GnuPlotter: Saving plot-1_03260.png
+GnuPlotter: Saving plot-2_03260.png
+GnuPlotter: Saving plot-1_03270.png
+GnuPlotter: Saving plot-2_03270.png
+GnuPlotter: Saving plot-1_03280.png
+GnuPlotter: Saving plot-2_03280.png
+GnuPlotter: Saving plot-1_03290.png
+GnuPlotter: Saving plot-2_03290.png
+GnuPlotter: Saving plot-1_03300.png
+GnuPlotter: Saving plot-2_03300.png
+Time: 3300 
+GnuPlotter: Saving plot-1_03310.png
+GnuPlotter: Saving plot-2_03310.png
+GnuPlotter: Saving plot-1_03320.png
+GnuPlotter: Saving plot-2_03320.png
+GnuPlotter: Saving plot-1_03330.png
+GnuPlotter: Saving plot-2_03330.png
+GnuPlotter: Saving plot-1_03340.png
+GnuPlotter: Saving plot-2_03340.png
+GnuPlotter: Saving plot-1_03350.png
+GnuPlotter: Saving plot-2_03350.png
+GnuPlotter: Saving plot-1_03360.png
+GnuPlotter: Saving plot-2_03360.png
+Time: 3360 
+GnuPlotter: Saving plot-1_03370.png
+GnuPlotter: Saving plot-2_03370.png
+GnuPlotter: Saving plot-1_03380.png
+GnuPlotter: Saving plot-2_03380.png
+GnuPlotter: Saving plot-1_03390.png
+GnuPlotter: Saving plot-2_03390.png
+GnuPlotter: Saving plot-1_03400.png
+GnuPlotter: Saving plot-2_03400.png
+GnuPlotter: Saving plot-1_03410.png
+GnuPlotter: Saving plot-2_03410.png
+GnuPlotter: Saving plot-1_03420.png
+GnuPlotter: Saving plot-2_03420.png
+Time: 3420 
+GnuPlotter: Saving plot-1_03430.png
+GnuPlotter: Saving plot-2_03430.png
+GnuPlotter: Saving plot-1_03440.png
+GnuPlotter: Saving plot-2_03440.png
+GnuPlotter: Saving plot-1_03450.png
+GnuPlotter: Saving plot-2_03450.png
+GnuPlotter: Saving plot-1_03460.png
+GnuPlotter: Saving plot-2_03460.png
+GnuPlotter: Saving plot-1_03470.png
+GnuPlotter: Saving plot-2_03470.png
+GnuPlotter: Saving plot-1_03480.png
+GnuPlotter: Saving plot-2_03480.png
+Time: 3480 
+GnuPlotter: Saving plot-1_03490.png
+GnuPlotter: Saving plot-2_03490.png
+GnuPlotter: Saving plot-1_03500.png
+GnuPlotter: Saving plot-2_03500.png
+GnuPlotter: Saving plot-1_03510.png
+GnuPlotter: Saving plot-2_03510.png
+GnuPlotter: Saving plot-1_03520.png
+GnuPlotter: Saving plot-2_03520.png
+GnuPlotter: Saving plot-1_03530.png
+GnuPlotter: Saving plot-2_03530.png
+GnuPlotter: Saving plot-1_03540.png
+GnuPlotter: Saving plot-2_03540.png
+Time: 3540 
+GnuPlotter: Saving plot-1_03550.png
+GnuPlotter: Saving plot-2_03550.png
+GnuPlotter: Saving plot-1_03560.png
+GnuPlotter: Saving plot-2_03560.png
+GnuPlotter: Saving plot-1_03570.png
+GnuPlotter: Saving plot-2_03570.png
+GnuPlotter: Saving plot-1_03580.png
+GnuPlotter: Saving plot-2_03580.png
+GnuPlotter: Saving plot-1_03590.png
+GnuPlotter: Saving plot-2_03590.png
+GnuPlotter: Saving plot-1_03600.png
+GnuPlotter: Saving plot-2_03600.png
+Time: 3600 
+GnuPlotter: Saving plot-1_03610.png
+GnuPlotter: Saving plot-2_03610.png
+GnuPlotter: Saving plot-1_03620.png
+GnuPlotter: Saving plot-2_03620.png
+GnuPlotter: Saving plot-1_03630.png
+GnuPlotter: Saving plot-2_03630.png
+GnuPlotter: Saving plot-1_03640.png
+GnuPlotter: Saving plot-2_03640.png
+GnuPlotter: Saving plot-1_03650.png
+GnuPlotter: Saving plot-2_03650.png
+GnuPlotter: Saving plot-1_03660.png
+GnuPlotter: Saving plot-2_03660.png
+Time: 3660 
+GnuPlotter: Saving plot-1_03670.png
+GnuPlotter: Saving plot-2_03670.png
+GnuPlotter: Saving plot-1_03680.png
+GnuPlotter: Saving plot-2_03680.png
+GnuPlotter: Saving plot-1_03690.png
+GnuPlotter: Saving plot-2_03690.png
+GnuPlotter: Saving plot-1_03700.png
+GnuPlotter: Saving plot-2_03700.png
+GnuPlotter: Saving plot-1_03710.png
+GnuPlotter: Saving plot-2_03710.png
+GnuPlotter: Saving plot-1_03720.png
+GnuPlotter: Saving plot-2_03720.png
+Time: 3720 
+GnuPlotter: Saving plot-1_03730.png
+GnuPlotter: Saving plot-2_03730.png
+GnuPlotter: Saving plot-1_03740.png
+GnuPlotter: Saving plot-2_03740.png
+GnuPlotter: Saving plot-1_03750.png
+GnuPlotter: Saving plot-2_03750.png
+GnuPlotter: Saving plot-1_03760.png
+GnuPlotter: Saving plot-2_03760.png
+GnuPlotter: Saving plot-1_03770.png
+GnuPlotter: Saving plot-2_03770.png
+GnuPlotter: Saving plot-1_03780.png
+GnuPlotter: Saving plot-2_03780.png
+Time: 3780 
+GnuPlotter: Saving plot-1_03790.png
+GnuPlotter: Saving plot-2_03790.png
+GnuPlotter: Saving plot-1_03800.png
+GnuPlotter: Saving plot-2_03800.png
+GnuPlotter: Saving plot-1_03810.png
+GnuPlotter: Saving plot-2_03810.png
+GnuPlotter: Saving plot-1_03820.png
+GnuPlotter: Saving plot-2_03820.png
+GnuPlotter: Saving plot-1_03830.png
+GnuPlotter: Saving plot-2_03830.png
+GnuPlotter: Saving plot-1_03840.png
+GnuPlotter: Saving plot-2_03840.png
+Time: 3840 
+GnuPlotter: Saving plot-1_03850.png
+GnuPlotter: Saving plot-2_03850.png
+GnuPlotter: Saving plot-1_03860.png
+GnuPlotter: Saving plot-2_03860.png
+GnuPlotter: Saving plot-1_03870.png
+GnuPlotter: Saving plot-2_03870.png
+GnuPlotter: Saving plot-1_03880.png
+GnuPlotter: Saving plot-2_03880.png
+GnuPlotter: Saving plot-1_03890.png
+GnuPlotter: Saving plot-2_03890.png
+GnuPlotter: Saving plot-1_03900.png
+GnuPlotter: Saving plot-2_03900.png
+Time: 3900 
+GnuPlotter: Saving plot-1_03910.png
+GnuPlotter: Saving plot-2_03910.png
+GnuPlotter: Saving plot-1_03920.png
+GnuPlotter: Saving plot-2_03920.png
+GnuPlotter: Saving plot-1_03930.png
+GnuPlotter: Saving plot-2_03930.png
+GnuPlotter: Saving plot-1_03940.png
+GnuPlotter: Saving plot-2_03940.png
+GnuPlotter: Saving plot-1_03950.png
+GnuPlotter: Saving plot-2_03950.png
+GnuPlotter: Saving plot-1_03960.png
+GnuPlotter: Saving plot-2_03960.png
+Time: 3960 
+GnuPlotter: Saving plot-1_03970.png
+GnuPlotter: Saving plot-2_03970.png
+GnuPlotter: Saving plot-1_03980.png
+GnuPlotter: Saving plot-2_03980.png
+GnuPlotter: Saving plot-1_03990.png
+GnuPlotter: Saving plot-2_03990.png
+GnuPlotter: Saving plot-1_04000.png
+GnuPlotter: Saving plot-2_04000.png
+GnuPlotter: Saving plot-1_04010.png
+GnuPlotter: Saving plot-2_04010.png
+GnuPlotter: Saving plot-1_04020.png
+GnuPlotter: Saving plot-2_04020.png
+Time: 4020 
+GnuPlotter: Saving plot-1_04030.png
+GnuPlotter: Saving plot-2_04030.png
+GnuPlotter: Saving plot-1_04040.png
+GnuPlotter: Saving plot-2_04040.png
+GnuPlotter: Saving plot-1_04050.png
+GnuPlotter: Saving plot-2_04050.png
+GnuPlotter: Saving plot-1_04060.png
+GnuPlotter: Saving plot-2_04060.png
+GnuPlotter: Saving plot-1_04070.png
+GnuPlotter: Saving plot-2_04070.png
+GnuPlotter: Saving plot-1_04080.png
+GnuPlotter: Saving plot-2_04080.png
+Time: 4080 
+GnuPlotter: Saving plot-1_04090.png
+GnuPlotter: Saving plot-2_04090.png
+GnuPlotter: Saving plot-1_04100.png
+GnuPlotter: Saving plot-2_04100.png
+GnuPlotter: Saving plot-1_04110.png
+GnuPlotter: Saving plot-2_04110.png
+GnuPlotter: Saving plot-1_04120.png
+GnuPlotter: Saving plot-2_04120.png
+GnuPlotter: Saving plot-1_04130.png
+GnuPlotter: Saving plot-2_04130.png
+GnuPlotter: Saving plot-1_04140.png
+GnuPlotter: Saving plot-2_04140.png
+Time: 4140 
+GnuPlotter: Saving plot-1_04150.png
+GnuPlotter: Saving plot-2_04150.png
+GnuPlotter: Saving plot-1_04160.png
+GnuPlotter: Saving plot-2_04160.png
+GnuPlotter: Saving plot-1_04170.png
+GnuPlotter: Saving plot-2_04170.png
+GnuPlotter: Saving plot-1_04180.png
+GnuPlotter: Saving plot-2_04180.png
+GnuPlotter: Saving plot-1_04190.png
+GnuPlotter: Saving plot-2_04190.png
+GnuPlotter: Saving plot-1_04200.png
+GnuPlotter: Saving plot-2_04200.png
+Time: 4200 
+GnuPlotter: Saving plot-1_04210.png
+GnuPlotter: Saving plot-2_04210.png
+GnuPlotter: Saving plot-1_04220.png
+GnuPlotter: Saving plot-2_04220.png
+GnuPlotter: Saving plot-1_04230.png
+GnuPlotter: Saving plot-2_04230.png
+GnuPlotter: Saving plot-1_04240.png
+GnuPlotter: Saving plot-2_04240.png
+GnuPlotter: Saving plot-1_04250.png
+GnuPlotter: Saving plot-2_04250.png
+GnuPlotter: Saving plot-1_04260.png
+GnuPlotter: Saving plot-2_04260.png
+Time: 4260 
+GnuPlotter: Saving plot-1_04270.png
+GnuPlotter: Saving plot-2_04270.png
+GnuPlotter: Saving plot-1_04280.png
+GnuPlotter: Saving plot-2_04280.png
+GnuPlotter: Saving plot-1_04290.png
+GnuPlotter: Saving plot-2_04290.png
+GnuPlotter: Saving plot-1_04300.png
+GnuPlotter: Saving plot-2_04300.png
+GnuPlotter: Saving plot-1_04310.png
+GnuPlotter: Saving plot-2_04310.png
+GnuPlotter: Saving plot-1_04320.png
+GnuPlotter: Saving plot-2_04320.png
+Time: 4320 
+GnuPlotter: Saving plot-1_04330.png
+GnuPlotter: Saving plot-2_04330.png
+GnuPlotter: Saving plot-1_04340.png
+GnuPlotter: Saving plot-2_04340.png
+GnuPlotter: Saving plot-1_04350.png
+GnuPlotter: Saving plot-2_04350.png
+GnuPlotter: Saving plot-1_04360.png
+GnuPlotter: Saving plot-2_04360.png
+GnuPlotter: Saving plot-1_04370.png
+GnuPlotter: Saving plot-2_04370.png
+GnuPlotter: Saving plot-1_04380.png
+GnuPlotter: Saving plot-2_04380.png
+Time: 4380 
+GnuPlotter: Saving plot-1_04390.png
+GnuPlotter: Saving plot-2_04390.png
+GnuPlotter: Saving plot-1_04400.png
+GnuPlotter: Saving plot-2_04400.png
+GnuPlotter: Saving plot-1_04410.png
+GnuPlotter: Saving plot-2_04410.png
+GnuPlotter: Saving plot-1_04420.png
+GnuPlotter: Saving plot-2_04420.png
+GnuPlotter: Saving plot-1_04430.png
+GnuPlotter: Saving plot-2_04430.png
+GnuPlotter: Saving plot-1_04440.png
+GnuPlotter: Saving plot-2_04440.png
+Time: 4440 
+GnuPlotter: Saving plot-1_04450.png
+GnuPlotter: Saving plot-2_04450.png
+GnuPlotter: Saving plot-1_04460.png
+GnuPlotter: Saving plot-2_04460.png
+GnuPlotter: Saving plot-1_04470.png
+GnuPlotter: Saving plot-2_04470.png
+GnuPlotter: Saving plot-1_04480.png
+GnuPlotter: Saving plot-2_04480.png
+GnuPlotter: Saving plot-1_04490.png
+GnuPlotter: Saving plot-2_04490.png
+GnuPlotter: Saving plot-1_04500.png
+GnuPlotter: Saving plot-2_04500.png
+Time: 4500 
+GnuPlotter: Saving plot-1_04510.png
+GnuPlotter: Saving plot-2_04510.png
+GnuPlotter: Saving plot-1_04520.png
+GnuPlotter: Saving plot-2_04520.png
+GnuPlotter: Saving plot-1_04530.png
+GnuPlotter: Saving plot-2_04530.png
+GnuPlotter: Saving plot-1_04540.png
+GnuPlotter: Saving plot-2_04540.png
+GnuPlotter: Saving plot-1_04550.png
+GnuPlotter: Saving plot-2_04550.png
+GnuPlotter: Saving plot-1_04560.png
+GnuPlotter: Saving plot-2_04560.png
+Time: 4560 
+GnuPlotter: Saving plot-1_04570.png
+GnuPlotter: Saving plot-2_04570.png
+GnuPlotter: Saving plot-1_04580.png
+GnuPlotter: Saving plot-2_04580.png
+GnuPlotter: Saving plot-1_04590.png
+GnuPlotter: Saving plot-2_04590.png
+GnuPlotter: Saving plot-1_04600.png
+GnuPlotter: Saving plot-2_04600.png
+GnuPlotter: Saving plot-1_04610.png
+GnuPlotter: Saving plot-2_04610.png
+GnuPlotter: Saving plot-1_04620.png
+GnuPlotter: Saving plot-2_04620.png
+Time: 4620 
+GnuPlotter: Saving plot-1_04630.png
+GnuPlotter: Saving plot-2_04630.png
+GnuPlotter: Saving plot-1_04640.png
+GnuPlotter: Saving plot-2_04640.png
+GnuPlotter: Saving plot-1_04650.png
+GnuPlotter: Saving plot-2_04650.png
+GnuPlotter: Saving plot-1_04660.png
+GnuPlotter: Saving plot-2_04660.png
+GnuPlotter: Saving plot-1_04670.png
+GnuPlotter: Saving plot-2_04670.png
+GnuPlotter: Saving plot-1_04680.png
+GnuPlotter: Saving plot-2_04680.png
+Time: 4680 
+GnuPlotter: Saving plot-1_04690.png
+GnuPlotter: Saving plot-2_04690.png
+GnuPlotter: Saving plot-1_04700.png
+GnuPlotter: Saving plot-2_04700.png
+GnuPlotter: Saving plot-1_04710.png
+GnuPlotter: Saving plot-2_04710.png
+GnuPlotter: Saving plot-1_04720.png
+GnuPlotter: Saving plot-2_04720.png
+GnuPlotter: Saving plot-1_04730.png
+GnuPlotter: Saving plot-2_04730.png
+GnuPlotter: Saving plot-1_04740.png
+GnuPlotter: Saving plot-2_04740.png
+Time: 4740 
+GnuPlotter: Saving plot-1_04750.png
+GnuPlotter: Saving plot-2_04750.png
+GnuPlotter: Saving plot-1_04760.png
+GnuPlotter: Saving plot-2_04760.png
+GnuPlotter: Saving plot-1_04770.png
+GnuPlotter: Saving plot-2_04770.png
+GnuPlotter: Saving plot-1_04780.png
+GnuPlotter: Saving plot-2_04780.png
+GnuPlotter: Saving plot-1_04790.png
+GnuPlotter: Saving plot-2_04790.png
+GnuPlotter: Saving plot-1_04800.png
+GnuPlotter: Saving plot-2_04800.png
+Time: 4800 
+GnuPlotter: Saving plot-1_04810.png
+GnuPlotter: Saving plot-2_04810.png
+GnuPlotter: Saving plot-1_04820.png
+GnuPlotter: Saving plot-2_04820.png
+GnuPlotter: Saving plot-1_04830.png
+GnuPlotter: Saving plot-2_04830.png
+GnuPlotter: Saving plot-1_04840.png
+GnuPlotter: Saving plot-2_04840.png
+GnuPlotter: Saving plot-1_04850.png
+GnuPlotter: Saving plot-2_04850.png
+GnuPlotter: Saving plot-1_04860.png
+GnuPlotter: Saving plot-2_04860.png
+Time: 4860 
+GnuPlotter: Saving plot-1_04870.png
+GnuPlotter: Saving plot-2_04870.png
+GnuPlotter: Saving plot-1_04880.png
+GnuPlotter: Saving plot-2_04880.png
+GnuPlotter: Saving plot-1_04890.png
+GnuPlotter: Saving plot-2_04890.png
+GnuPlotter: Saving plot-1_04900.png
+GnuPlotter: Saving plot-2_04900.png
+GnuPlotter: Saving plot-1_04910.png
+GnuPlotter: Saving plot-2_04910.png
+GnuPlotter: Saving plot-1_04920.png
+GnuPlotter: Saving plot-2_04920.png
+Time: 4920 
+GnuPlotter: Saving plot-1_04930.png
+GnuPlotter: Saving plot-2_04930.png
+GnuPlotter: Saving plot-1_04940.png
+GnuPlotter: Saving plot-2_04940.png
+GnuPlotter: Saving plot-1_04950.png
+GnuPlotter: Saving plot-2_04950.png
+GnuPlotter: Saving plot-1_04960.png
+GnuPlotter: Saving plot-2_04960.png
+GnuPlotter: Saving plot-1_04970.png
+GnuPlotter: Saving plot-2_04970.png
+GnuPlotter: Saving plot-1_04980.png
+GnuPlotter: Saving plot-2_04980.png
+Time: 4980 
+GnuPlotter: Saving plot-1_04990.png
+GnuPlotter: Saving plot-2_04990.png
+GnuPlotter: Saving plot-1_05000.png
+GnuPlotter: Saving plot-2_05000.png
+GnuPlotter: Saving plot-1_05010.png
+GnuPlotter: Saving plot-2_05010.png
+GnuPlotter: Saving plot-1_05020.png
+GnuPlotter: Saving plot-2_05020.png
+GnuPlotter: Saving plot-1_05030.png
+GnuPlotter: Saving plot-2_05030.png
+GnuPlotter: Saving plot-1_05040.png
+GnuPlotter: Saving plot-2_05040.png
+Time: 5040 
+GnuPlotter: Saving plot-1_05050.png
+GnuPlotter: Saving plot-2_05050.png
+GnuPlotter: Saving plot-1_05060.png
+GnuPlotter: Saving plot-2_05060.png
+GnuPlotter: Saving plot-1_05070.png
+GnuPlotter: Saving plot-2_05070.png
+GnuPlotter: Saving plot-1_05080.png
+GnuPlotter: Saving plot-2_05080.png
+GnuPlotter: Saving plot-1_05090.png
+GnuPlotter: Saving plot-2_05090.png
+GnuPlotter: Saving plot-1_05100.png
+GnuPlotter: Saving plot-2_05100.png
+Time: 5100 
+GnuPlotter: Saving plot-1_05110.png
+GnuPlotter: Saving plot-2_05110.png
+GnuPlotter: Saving plot-1_05120.png
+GnuPlotter: Saving plot-2_05120.png
+GnuPlotter: Saving plot-1_05130.png
+GnuPlotter: Saving plot-2_05130.png
+GnuPlotter: Saving plot-1_05140.png
+GnuPlotter: Saving plot-2_05140.png
+GnuPlotter: Saving plot-1_05150.png
+GnuPlotter: Saving plot-2_05150.png
+GnuPlotter: Saving plot-1_05160.png
+GnuPlotter: Saving plot-2_05160.png
+Time: 5160 
+GnuPlotter: Saving plot-1_05170.png
+GnuPlotter: Saving plot-2_05170.png
+GnuPlotter: Saving plot-1_05180.png
+GnuPlotter: Saving plot-2_05180.png
+GnuPlotter: Saving plot-1_05190.png
+GnuPlotter: Saving plot-2_05190.png
+GnuPlotter: Saving plot-1_05200.png
+GnuPlotter: Saving plot-2_05200.png
+GnuPlotter: Saving plot-1_05210.png
+GnuPlotter: Saving plot-2_05210.png
+GnuPlotter: Saving plot-1_05220.png
+GnuPlotter: Saving plot-2_05220.png
+Time: 5220 
+GnuPlotter: Saving plot-1_05230.png
+GnuPlotter: Saving plot-2_05230.png
+GnuPlotter: Saving plot-1_05240.png
+GnuPlotter: Saving plot-2_05240.png
+GnuPlotter: Saving plot-1_05250.png
+GnuPlotter: Saving plot-2_05250.png
+GnuPlotter: Saving plot-1_05260.png
+GnuPlotter: Saving plot-2_05260.png
+GnuPlotter: Saving plot-1_05270.png
+GnuPlotter: Saving plot-2_05270.png
+GnuPlotter: Saving plot-1_05280.png
+GnuPlotter: Saving plot-2_05280.png
+Time: 5280 
+GnuPlotter: Saving plot-1_05290.png
+GnuPlotter: Saving plot-2_05290.png
+GnuPlotter: Saving plot-1_05300.png
+GnuPlotter: Saving plot-2_05300.png
+GnuPlotter: Saving plot-1_05310.png
+GnuPlotter: Saving plot-2_05310.png
+GnuPlotter: Saving plot-1_05320.png
+GnuPlotter: Saving plot-2_05320.png
+GnuPlotter: Saving plot-1_05330.png
+GnuPlotter: Saving plot-2_05330.png
+GnuPlotter: Saving plot-1_05340.png
+GnuPlotter: Saving plot-2_05340.png
+Time: 5340 
+GnuPlotter: Saving plot-1_05350.png
+GnuPlotter: Saving plot-2_05350.png
+GnuPlotter: Saving plot-1_05360.png
+GnuPlotter: Saving plot-2_05360.png
+GnuPlotter: Saving plot-1_05370.png
+GnuPlotter: Saving plot-2_05370.png
+GnuPlotter: Saving plot-1_05380.png
+GnuPlotter: Saving plot-2_05380.png
+GnuPlotter: Saving plot-1_05390.png
+GnuPlotter: Saving plot-2_05390.png
+GnuPlotter: Saving plot-1_05400.png
+GnuPlotter: Saving plot-2_05400.png
+Time: 5400 
+GnuPlotter: Saving plot-1_05410.png
+GnuPlotter: Saving plot-2_05410.png
+GnuPlotter: Saving plot-1_05420.png
+GnuPlotter: Saving plot-2_05420.png
+GnuPlotter: Saving plot-1_05430.png
+GnuPlotter: Saving plot-2_05430.png
+GnuPlotter: Saving plot-1_05440.png
+GnuPlotter: Saving plot-2_05440.png
+GnuPlotter: Saving plot-1_05450.png
+GnuPlotter: Saving plot-2_05450.png
+GnuPlotter: Saving plot-1_05460.png
+GnuPlotter: Saving plot-2_05460.png
+Time: 5460 
+GnuPlotter: Saving plot-1_05470.png
+GnuPlotter: Saving plot-2_05470.png
+GnuPlotter: Saving plot-1_05480.png
+GnuPlotter: Saving plot-2_05480.png
+GnuPlotter: Saving plot-1_05490.png
+GnuPlotter: Saving plot-2_05490.png
+GnuPlotter: Saving plot-1_05500.png
+GnuPlotter: Saving plot-2_05500.png
+GnuPlotter: Saving plot-1_05510.png
+GnuPlotter: Saving plot-2_05510.png
+GnuPlotter: Saving plot-1_05520.png
+GnuPlotter: Saving plot-2_05520.png
+Time: 5520 
+GnuPlotter: Saving plot-1_05530.png
+GnuPlotter: Saving plot-2_05530.png
+GnuPlotter: Saving plot-1_05540.png
+GnuPlotter: Saving plot-2_05540.png
+GnuPlotter: Saving plot-1_05550.png
+GnuPlotter: Saving plot-2_05550.png
+GnuPlotter: Saving plot-1_05560.png
+GnuPlotter: Saving plot-2_05560.png
+GnuPlotter: Saving plot-1_05570.png
+GnuPlotter: Saving plot-2_05570.png
+GnuPlotter: Saving plot-1_05580.png
+GnuPlotter: Saving plot-2_05580.png
+Time: 5580 
+GnuPlotter: Saving plot-1_05590.png
+GnuPlotter: Saving plot-2_05590.png
+GnuPlotter: Saving plot-1_05600.png
+GnuPlotter: Saving plot-2_05600.png
+GnuPlotter: Saving plot-1_05610.png
+GnuPlotter: Saving plot-2_05610.png
+GnuPlotter: Saving plot-1_05620.png
+GnuPlotter: Saving plot-2_05620.png
+GnuPlotter: Saving plot-1_05630.png
+GnuPlotter: Saving plot-2_05630.png
+GnuPlotter: Saving plot-1_05640.png
+GnuPlotter: Saving plot-2_05640.png
+Time: 5640 
+GnuPlotter: Saving plot-1_05650.png
+GnuPlotter: Saving plot-2_05650.png
+GnuPlotter: Saving plot-1_05660.png
+GnuPlotter: Saving plot-2_05660.png
+GnuPlotter: Saving plot-1_05670.png
+GnuPlotter: Saving plot-2_05670.png
+GnuPlotter: Saving plot-1_05680.png
+GnuPlotter: Saving plot-2_05680.png
+GnuPlotter: Saving plot-1_05690.png
+GnuPlotter: Saving plot-2_05690.png
+GnuPlotter: Saving plot-1_05700.png
+GnuPlotter: Saving plot-2_05700.png
+Time: 5700 
+GnuPlotter: Saving plot-1_05710.png
+GnuPlotter: Saving plot-2_05710.png
+GnuPlotter: Saving plot-1_05720.png
+GnuPlotter: Saving plot-2_05720.png
+GnuPlotter: Saving plot-1_05730.png
+GnuPlotter: Saving plot-2_05730.png
+GnuPlotter: Saving plot-1_05740.png
+GnuPlotter: Saving plot-2_05740.png
+GnuPlotter: Saving plot-1_05750.png
+GnuPlotter: Saving plot-2_05750.png
+GnuPlotter: Saving plot-1_05760.png
+GnuPlotter: Saving plot-2_05760.png
+Time: 5760 
+GnuPlotter: Saving plot-1_05770.png
+GnuPlotter: Saving plot-2_05770.png
+GnuPlotter: Saving plot-1_05780.png
+GnuPlotter: Saving plot-2_05780.png
+GnuPlotter: Saving plot-1_05790.png
+GnuPlotter: Saving plot-2_05790.png
+GnuPlotter: Saving plot-1_05800.png
+GnuPlotter: Saving plot-2_05800.png
+GnuPlotter: Saving plot-1_05810.png
+GnuPlotter: Saving plot-2_05810.png
+GnuPlotter: Saving plot-1_05820.png
+GnuPlotter: Saving plot-2_05820.png
+Time: 5820 
+GnuPlotter: Saving plot-1_05830.png
+GnuPlotter: Saving plot-2_05830.png
+GnuPlotter: Saving plot-1_05840.png
+GnuPlotter: Saving plot-2_05840.png
+GnuPlotter: Saving plot-1_05850.png
+GnuPlotter: Saving plot-2_05850.png
+GnuPlotter: Saving plot-1_05860.png
+GnuPlotter: Saving plot-2_05860.png
+GnuPlotter: Saving plot-1_05870.png
+GnuPlotter: Saving plot-2_05870.png
+GnuPlotter: Saving plot-1_05880.png
+GnuPlotter: Saving plot-2_05880.png
+Time: 5880 
+GnuPlotter: Saving plot-1_05890.png
+GnuPlotter: Saving plot-2_05890.png
+GnuPlotter: Saving plot-1_05900.png
+GnuPlotter: Saving plot-2_05900.png
+GnuPlotter: Saving plot-1_05910.png
+GnuPlotter: Saving plot-2_05910.png
+GnuPlotter: Saving plot-1_05920.png
+GnuPlotter: Saving plot-2_05920.png
+GnuPlotter: Saving plot-1_05930.png
+GnuPlotter: Saving plot-2_05930.png
+GnuPlotter: Saving plot-1_05940.png
+GnuPlotter: Saving plot-2_05940.png
+Time: 5940 
+GnuPlotter: Saving plot-1_05950.png
+GnuPlotter: Saving plot-2_05950.png
+GnuPlotter: Saving plot-1_05960.png
+GnuPlotter: Saving plot-2_05960.png
+GnuPlotter: Saving plot-1_05970.png
+GnuPlotter: Saving plot-2_05970.png
+GnuPlotter: Saving plot-1_05980.png
+GnuPlotter: Saving plot-2_05980.png
+GnuPlotter: Saving plot-1_05990.png
+GnuPlotter: Saving plot-2_05990.png
+GnuPlotter: Saving plot-1_06000.png
+GnuPlotter: Saving plot-2_06000.png
+Time: 6000 
+Writing cell tracks
+Saving Figure6_WP_Maze_Collision006000.xml.gz
+AutoFix: Moved 2 element(s)  matching /MorpheusModel/CellTypes/CellType/System/DiffEqn/Reaction to /MorpheusModel/CellTypes/CellType/System/DiffEqn/Expression
+AutoFix: Moved 5 element(s)  matching /MorpheusModel/CellTypes/CellType/System/DiffEqn[(@symbol-ref)]/Diffusion/@text to /MorpheusModel/CellTypes/CellType/MembraneProperty[@symbol=%1]/Diffusion/@rate
+AutoFix: Moved 5 element(s)  matching /MorpheusModel/CellTypes/CellType/System/DiffEqn/Diffusion to 
+saveToXML:: Applied 12 patches to set MorpheusML version  v4!
+sampler 1 layer 11
+
+=======================================================
+    SCHEDULER PERFORMANCE STATISTICS
+=======================================================
+
+    +  36.0% = 576.0s (139.0)  | Gnuplotter [A,U,p]
+    +  35.9% = 574.0s (633.0)  | System [H,K,T,delta,gamma,k_0,k_1,n,s,s_1 -> A,B,H,P2,P3,rate1]
+           |  25.2s ( 32.7)  | Diffusion[A]
+           | 169.1s (176.9)  | Diffusion[B]
+           |  19.9s ( 27.0)  | Diffusion[H]
+           | 106.9s (114.1)  | Diffusion[P2]
+           | 106.4s (114.7)  | Diffusion[P3]
+           | 146.5s (167.6)  | Reaction
+    +  22.4% = 357.7s (116.7)  | Gnuplotter [U,cell.type]
+    +   2.1% =  33.7s ( 43.4)  | Mapper [A,cell.center -> p]
+    +   1.0% =  15.4s ( 44.2)  | CPM [A,prot -> cell.center,cell.length,cell.surface,cell.type,cell.volume]
+    +   0.8% =  12.8s ( 15.4)  | Event [p.phi,time,ts2 -> ts3]
+    +   0.8% =  12.6s ( 14.8)  | System [cell.surface -> T]
+    +   0.1% =   2.2s (  3.9)  | Mapper [U,cell.center -> s]
+    +   0.1% =   1.9s (  1.8)  | Logger [A,B,H,P3,m.phi,p.phi,s]
+    +   0.0% =   0.7s (  0.6)  | Protrusion [prot -> prot]
+    +   0.0% =   0.5s (  0.0)  | Initialisation []
+    +   0.0% =   0.0s (  0.0)  | CellTracker [cell.center]
+    +   0.0% =   0.0s (  0.0)  | ModelGraph []
+    +   0.0% =   0.0s (  0.0)  | Mapper [U,cell.center -> p1]
+
+======================================================
+
+=== Simulation finished ===
+Wall Time   = 26m 37s
+CPU Time    = 19m 28s (4 threads)
+

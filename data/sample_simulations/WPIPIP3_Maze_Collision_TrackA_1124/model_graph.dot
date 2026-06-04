@@ -1,0 +1,258 @@
+digraph {
+compound=true;
+subgraph cluster{
+labelloc="t";label="Global";bgcolor="#2341782f"
+node[style=filled,fillcolor="#fffea3"]
+Gnuplotter_0_10[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>Gnuplotter</td></tr>
+<hr/>
+<tr><td>10</td></tr></table></font>>, URL="morph://MorpheusModel/Analysis/Gnuplotter" ]
+CellTracker_0_1[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>CellTracker</td></tr>
+<hr/>
+<tr><td>1</td></tr></table></font>>, URL="morph://MorpheusModel/Analysis/CellTracker" ]
+Logger_0_10[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>Logger</td></tr>
+<hr/>
+<tr><td>10</td></tr></table></font>>, URL="morph://MorpheusModel/Analysis/Logger" ]
+CPM_0_1 [shape=record, label="{CPM|1}", URL="morph://MorpheusModel/CPM" ]
+A_0[label="A", fillcolor="#d3d247",peripheries=2]
+B_0[label="B", fillcolor="#d3d247",peripheries=2]
+H_0[label="H", fillcolor="#d3d247",peripheries=2]
+U_0[label="U", fillcolor="#d3d247", URL="morph://MorpheusModel/Global/Field[1]"]
+cell_center_0[label="cell.center", fillcolor="#b5b426",peripheries=2]
+cell_type_0[label="cell.type", fillcolor="#d3d247",peripheries=2]
+m_0[label="m", fillcolor="#b5b426"]
+m_phi_0[label="m.phi", fillcolor="#d3d247"]
+p_0[label="p", fillcolor="#b5b426",peripheries=2]
+p_phi_0[label="p.phi", fillcolor="#d3d247"]
+prot_0[label="prot", fillcolor="#d3d247", URL="morph://MorpheusModel/Global/Field[0]"]
+s_0[label="s", fillcolor="#d3d247",peripheries=2]
+time_0[label="time", fillcolor="#d3d247", URL="morph://MorpheusModel/Time/TimeSymbol"]
+ts2_0[label="ts2", fillcolor="#d3d247", URL="morph://MorpheusModel/Global/Constant[2]"]
+ts3_0[label="ts3", fillcolor="#d3d247", URL="morph://MorpheusModel/Global/Variable[2]"]
+subgraph cluster_1 {
+label="Function";
+}
+subgraph cluster_2 {
+label="CellType[cells]";
+Mapper_2_6202930901620302023_0[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>Mapper</td></tr>
+<tr><td><i>'Polarity extraction from membrane'</i></td></tr>
+<hr/>
+<tr><td>-1</td></tr></table></font>>, URL="morph://MorpheusModel/CellTypes/CellType/Mapper[1]" ]
+Mapper_2_11901977823854601366_1_25[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>Mapper</td></tr>
+<tr><td><i>'Sensing the field'</i></td></tr>
+<hr/>
+<tr><td>1.25</td></tr></table></font>>, URL="morph://MorpheusModel/CellTypes/CellType/Mapper[2]" ]
+Mapper_2_6202930901620302023_0_01[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>Mapper</td></tr>
+<tr><td><i>'Polarity extraction from membrane'</i></td></tr>
+<hr/>
+<tr><td>0.01</td></tr></table></font>>, URL="morph://MorpheusModel/CellTypes/CellType/Mapper[0]" ]
+Protrusion_2_1[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>Protrusion</td></tr>
+<hr/>
+<tr><td>1</td></tr></table></font>>, URL="morph://MorpheusModel/CellTypes/CellType/Protrusion" ]
+subgraph cluster_cpm2 {
+label="CPM components";
+StarConvex_2[ shape=Mrecord, label=" StarConvex", URL="morph://MorpheusModel/CellTypes/CellType/StarConvex"];
+Protrusion_2_1[ shape=Mrecord, label=" Protrusion", URL="morph://MorpheusModel/CellTypes/CellType/Protrusion"];
+}
+A_2[label="A", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/MembraneProperty[0]"]
+B_2[label="B", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/MembraneProperty[1]"]
+H_2[label="H", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/MembraneProperty[2]"]
+P2_2[label="P2", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/MembraneProperty[4]"]
+P3_2[label="P3", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/MembraneProperty[3]"]
+T_2[label="T", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/Property"]
+cell_center_2[label="cell.center", fillcolor="#b5b426"]
+cell_surface_2[label="cell.surface", fillcolor="#d3d247"]
+cell_type_2[label="cell.type", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType"]
+p_2[label="p", fillcolor="#b5b426", URL="morph://MorpheusModel/CellTypes/CellType/PropertyVector[0]"]
+p_phi_2[label="p.phi", fillcolor="#d3d247"]
+p1_2[label="p1", fillcolor="#b5b426", URL="morph://MorpheusModel/CellTypes/CellType/PropertyVector[1]"]
+rate_2[label="rate", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/MembraneProperty[5]"]
+rate1_2[label="rate1", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/MembraneProperty[6]"]
+s_2[label="s", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/MembraneProperty[7]"]
+subgraph cluster_3 {
+label="";
+System_3_2101469651418373776_0_01[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>System</td></tr>
+<tr><td><i>'WavePinning with Inhibitor'</i></td></tr>
+<hr/>
+<tr><td>0.01</td></tr></table></font>>, URL="morph://MorpheusModel/CellTypes/CellType/System[0]" ]
+K_3[label="K", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[0]/Constant[5]"]
+delta_3[label="delta", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[0]/Constant[4]"]
+gamma_3[label="gamma", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[0]/Constant[3]"]
+k_0_3[label="k_0", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[0]/Constant[0]"]
+k_1_3[label="k_1", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[0]/Constant[1]"]
+n_3[label="n", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[0]/Constant[6]"]
+s_1_3[label="s_1", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[0]/Constant[2]"]
+}
+subgraph cluster_4 {
+label="";
+System_4_5121272551022363624_0_01[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>System</td></tr>
+<tr><td><i>'Inhibitor'</i></td></tr>
+<hr/>
+<tr><td>0.01</td></tr></table></font>>, URL="morph://MorpheusModel/CellTypes/CellType/System[1]" ]
+alpha_4[label="alpha", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[1]/Constant[0]"]
+deltah_4[label="deltah", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[1]/Constant[1]"]
+}
+subgraph cluster_5 {
+label="";
+System_5_13879139109504307495_1_25[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>System</td></tr>
+<tr><td><i>'PIP3'</i></td></tr>
+<hr/>
+<tr><td>1.25</td></tr></table></font>>, URL="morph://MorpheusModel/CellTypes/CellType/System[2]" ]
+}
+subgraph cluster_6 {
+label="";
+Event_6_0_01[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>Event</td></tr>
+<hr/>
+<tr><td>0.01</td></tr></table></font>>, URL="morph://MorpheusModel/CellTypes/CellType/Event" ]
+}
+subgraph cluster_7 {
+label="";
+System_7_0_01[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>System</td></tr>
+<hr/>
+<tr><td>0.01</td></tr></table></font>>, URL="morph://MorpheusModel/CellTypes/CellType/System[3]" ]
+}
+}
+subgraph cluster_8 {
+label="CellType[Medium]";
+}
+}
+A_0 -> A_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+A_0 -> Logger_0_10 [penwidth=2, color="#112c5f"] 
+
+A_2 -> A_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+A_2 -> Mapper_2_6202930901620302023_0_01 [penwidth=2, color="#112c5f"] 
+
+A_2 -> StarConvex_2 [penwidth=2, color="#112c5f"] 
+
+A_2 -> System_4_5121272551022363624_0_01 [penwidth=2, color="#112c5f"] 
+
+B_0 -> B_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+B_0 -> Logger_0_10 [penwidth=2, color="#112c5f"] 
+
+B_2 -> B_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+CPM_0_1 -> StarConvex_2 [dir=none, style="dashed", penwidth=1, color="#38568c",lhead=cluster_cpm2] 
+
+CPM_0_1 -> cell_center_0 [penwidth=3, color="#8f100d"] 
+
+CPM_0_1 -> cell_type_0 [penwidth=3, color="#8f100d"] 
+
+Event_6_0_01 -> ts3_0 [penwidth=3, color="#8f100d"] 
+
+H_0 -> Logger_0_10 [penwidth=2, color="#112c5f"] 
+
+H_2 -> H_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+H_2 -> System_3_2101469651418373776_0_01 [penwidth=2, color="#112c5f"] 
+
+K_3 -> System_3_2101469651418373776_0_01 [penwidth=2, color="#112c5f"] 
+
+Mapper_2_11901977823854601366_1_25 -> s_2 [penwidth=3, color="#8f100d"] 
+
+Mapper_2_6202930901620302023_0 -> p1_2 [penwidth=3, color="#8f100d"] 
+
+Mapper_2_6202930901620302023_0_01 -> p_2 [penwidth=3, color="#8f100d"] 
+
+P3_2 -> Logger_0_10 [penwidth=2, color="#112c5f"] 
+
+P3_2 -> System_3_2101469651418373776_0_01 [penwidth=2, color="#112c5f"] 
+
+Protrusion_2_1 -> prot_0 [penwidth=3, color="#8f100d"] 
+
+System_3_2101469651418373776_0_01 -> A_2 [penwidth=3, color="#8f100d"] 
+
+System_3_2101469651418373776_0_01 -> B_2 [penwidth=3, color="#8f100d"] 
+
+System_3_2101469651418373776_0_01 -> rate1_2 [penwidth=3, color="#8f100d"] 
+
+System_4_5121272551022363624_0_01 -> H_2 [penwidth=3, color="#8f100d"] 
+
+System_5_13879139109504307495_1_25 -> P2_2 [penwidth=3, color="#8f100d"] 
+
+System_5_13879139109504307495_1_25 -> P3_2 [penwidth=3, color="#8f100d"] 
+
+System_5_13879139109504307495_1_25 -> rate_2 [penwidth=3, color="#8f100d"] 
+
+System_7_0_01 -> T_2 [penwidth=3, color="#8f100d"] 
+
+T_2 -> System_3_2101469651418373776_0_01 [penwidth=2, color="#112c5f"] 
+
+U_0 -> Gnuplotter_0_10 [penwidth=2, color="#112c5f"] 
+
+U_0 -> Mapper_2_11901977823854601366_1_25 [penwidth=2, color="#112c5f"] 
+
+U_0 -> Mapper_2_6202930901620302023_0 [penwidth=2, color="#112c5f"] 
+
+alpha_4 -> System_4_5121272551022363624_0_01 [penwidth=2, color="#112c5f"] 
+
+cell_center_0 -> CellTracker_0_1 [penwidth=2, color="#112c5f"] 
+
+cell_center_2 -> Mapper_2_11901977823854601366_1_25 [penwidth=2, color="#112c5f"] 
+
+cell_center_2 -> Mapper_2_6202930901620302023_0 [penwidth=2, color="#112c5f"] 
+
+cell_center_2 -> Mapper_2_6202930901620302023_0_01 [penwidth=2, color="#112c5f"] 
+
+cell_center_2 -> cell_center_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+cell_surface_2 -> System_7_0_01 [penwidth=2, color="#112c5f"] 
+
+cell_type_0 -> Gnuplotter_0_10 [penwidth=2, color="#112c5f"] 
+
+cell_type_2 -> cell_type_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+delta_3 -> System_3_2101469651418373776_0_01 [penwidth=2, color="#112c5f"] 
+
+deltah_4 -> System_4_5121272551022363624_0_01 [penwidth=2, color="#112c5f"] 
+
+gamma_3 -> System_3_2101469651418373776_0_01 [penwidth=2, color="#112c5f"] 
+
+k_0_3 -> System_3_2101469651418373776_0_01 [penwidth=2, color="#112c5f"] 
+
+k_1_3 -> System_3_2101469651418373776_0_01 [penwidth=2, color="#112c5f"] 
+
+m_0 -> m_phi_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+m_phi_0 -> Logger_0_10 [penwidth=2, color="#112c5f"] 
+
+n_3 -> System_3_2101469651418373776_0_01 [penwidth=2, color="#112c5f"] 
+
+p_0 -> p_phi_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+p_2 -> p_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+p_2 -> p_phi_2 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+p_phi_0 -> Logger_0_10 [penwidth=2, color="#112c5f"] 
+
+p_phi_2 -> Event_6_0_01 [penwidth=2, color="#112c5f"] 
+
+prot_0 -> Protrusion_2_1 [penwidth=2, color="#112c5f"] 
+
+s_0 -> Logger_0_10 [penwidth=2, color="#112c5f"] 
+
+s_1_3 -> System_3_2101469651418373776_0_01 [penwidth=2, color="#112c5f"] 
+
+s_2 -> System_5_13879139109504307495_1_25 [penwidth=2, color="#112c5f"] 
+
+s_2 -> s_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+time_0 -> Event_6_0_01 [penwidth=2, color="#112c5f"] 
+
+ts2_0 -> Event_6_0_01 [penwidth=2, color="#112c5f"] 
+
+}

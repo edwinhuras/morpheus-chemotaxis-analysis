@@ -1,0 +1,253 @@
+digraph {
+compound=true;
+subgraph cluster{
+labelloc="t";label="Global";bgcolor="#2341782f"
+node[style=filled,fillcolor="#fffea3"]
+CPM_0_0_3 [shape=record, label="{CPM|0.3}", URL="morph://MorpheusModel/CPM" ]
+CellTracker_0_1[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>CellTracker</td></tr>
+<hr/>
+<tr><td>1</td></tr></table></font>>, URL="morph://MorpheusModel/Analysis/CellTracker" ]
+Logger_0_5[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>Logger</td></tr>
+<hr/>
+<tr><td>5</td></tr></table></font>>, URL="morph://MorpheusModel/Analysis/Logger" ]
+Gnuplotter_0_11462362174534698831_10[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>Gnuplotter</td></tr>
+<tr><td><i>'Collision detection plot'</i></td></tr>
+<hr/>
+<tr><td>10</td></tr></table></font>>, URL="morph://MorpheusModel/Analysis/Gnuplotter" ]
+R_0[label="R", fillcolor="#d3d247",peripheries=2]
+R_i_0[label="R_i", fillcolor="#d3d247",peripheries=2]
+Rho_0[label="Rho", fillcolor="#d3d247",peripheries=2]
+Rho_i_0[label="Rho_i", fillcolor="#d3d247",peripheries=2]
+Tension_0[label="Tension", fillcolor="#d3d247",peripheries=2]
+U_0[label="U", fillcolor="#d3d247", URL="morph://MorpheusModel/Global/Field[0]"]
+cell_center_0[label="cell.center", fillcolor="#b5b426",peripheries=2]
+cell_type_0[label="cell.type", fillcolor="#d3d247",peripheries=2]
+m_0[label="m", fillcolor="#b5b426"]
+m_phi_0[label="m.phi", fillcolor="#d3d247"]
+prot_0[label="prot", fillcolor="#d3d247", URL="morph://MorpheusModel/Global/Field[1]"]
+s_0[label="s", fillcolor="#d3d247",peripheries=2]
+subgraph cluster_1 {
+label="CellType[cells]";
+Mapper_1_11901977823854601366_0_3[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>Mapper</td></tr>
+<tr><td><i>'Sensing the field'</i></td></tr>
+<hr/>
+<tr><td>0.3</td></tr></table></font>>, URL="morph://MorpheusModel/CellTypes/CellType/Mapper[1]" ]
+Mapper_1_6202930901620302023_0[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>Mapper</td></tr>
+<tr><td><i>'Polarity extraction from membrane'</i></td></tr>
+<hr/>
+<tr><td>-1</td></tr></table></font>>, URL="morph://MorpheusModel/CellTypes/CellType/Mapper[0]" ]
+Protrusion_1_0_3[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>Protrusion</td></tr>
+<hr/>
+<tr><td>0.3</td></tr></table></font>>, URL="morph://MorpheusModel/CellTypes/CellType/Protrusion" ]
+subgraph cluster_cpm1 {
+label="CPM components";
+StarConvex_1[ shape=Mrecord, label=" StarConvex", URL="morph://MorpheusModel/CellTypes/CellType/StarConvex"];
+Protrusion_1_0_3[ shape=Mrecord, label=" Protrusion", URL="morph://MorpheusModel/CellTypes/CellType/Protrusion"];
+}
+Area_1[label="Area", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/Property[0]"]
+H_1[label="H", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/MembraneProperty[4]"]
+P2_1[label="P2", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/MembraneProperty[5]"]
+P3_1[label="P3", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/MembraneProperty[6]"]
+Perimeter_1[label="Perimeter", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/Property[1]"]
+R_1[label="R", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/MembraneProperty[0]"]
+R_i_1[label="R_i", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/MembraneProperty[1]"]
+Rho_1[label="Rho", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/MembraneProperty[2]"]
+Rho_i_1[label="Rho_i", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/MembraneProperty[3]"]
+T_0_1[label="T_0", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/Constant[1]"]
+Tension_1[label="Tension", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/Property[3]"]
+cell_center_1[label="cell.center", fillcolor="#b5b426"]
+cell_surface_1[label="cell.surface", fillcolor="#d3d247"]
+cell_type_1[label="cell.type", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType"]
+cell_volume_1[label="cell.volume", fillcolor="#d3d247"]
+p_1[label="p", fillcolor="#b5b426", URL="morph://MorpheusModel/CellTypes/CellType/PropertyVector"]
+s_1[label="s", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/MembraneProperty[7]"]
+targ_Perimeter_1[label="targ_Perimeter", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/Constant[0]"]
+subgraph cluster_2 {
+label="";
+System_2_12167910147695108538_0_01[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>System</td></tr>
+<tr><td><i>'WavePinning Rac'</i></td></tr>
+<hr/>
+<tr><td>0.01</td></tr></table></font>>, URL="morph://MorpheusModel/CellTypes/CellType/System[0]" ]
+delta_2[label="delta", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[0]/Constant[4]"]
+gamma_2[label="gamma", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[0]/Constant[3]"]
+k_0_2[label="k_0", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[0]/Constant[0]"]
+k_1_2[label="k_1", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[0]/Constant[1]"]
+n_2[label="n", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[0]/Constant[6]"]
+s_1_2[label="s_1", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[0]/Constant[2]"]
+}
+subgraph cluster_3 {
+label="";
+System_3_16139349544387968651_0_01[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>System</td></tr>
+<tr><td><i>'WavePinning Rho'</i></td></tr>
+<hr/>
+<tr><td>0.01</td></tr></table></font>>, URL="morph://MorpheusModel/CellTypes/CellType/System[1]" ]
+K_T_3[label="K_T", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[1]/Constant[6]"]
+delta_rho_3[label="delta_rho", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[1]/Constant[4]"]
+gamma_rho_3[label="gamma_rho", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[1]/Constant[3]"]
+k_0_rho_3[label="k_0_rho", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[1]/Constant[0]"]
+k_1_rho_3[label="k_1_rho", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[1]/Constant[1]"]
+n_3[label="n", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[1]/Constant[8]"]
+n_T_3[label="n_T", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[1]/Constant[7]"]
+s_1_rho_3[label="s_1_rho", fillcolor="#d3d247", URL="morph://MorpheusModel/CellTypes/CellType/System[1]/Constant[2]"]
+}
+subgraph cluster_4 {
+label="";
+System_4_0_01[ shape=plain, label=<<font face="times" point-size="15"><table cellborder="0" border="1" cellspacing="0" cellpadding="3" align="center">
+<tr><td>System</td></tr>
+<hr/>
+<tr><td>0.01</td></tr></table></font>>, URL="morph://MorpheusModel/CellTypes/CellType/System[2]" ]
+}
+}
+subgraph cluster_5 {
+label="CellType[Medium]";
+}
+}
+CPM_0_0_3 -> StarConvex_1 [dir=none, style="dashed", penwidth=1, color="#38568c",lhead=cluster_cpm1] 
+
+CPM_0_0_3 -> cell_center_0 [penwidth=3, color="#8f100d"] 
+
+CPM_0_0_3 -> cell_type_0 [penwidth=3, color="#8f100d"] 
+
+H_1 -> System_2_12167910147695108538_0_01 [penwidth=2, color="#112c5f"] 
+
+H_1 -> System_3_16139349544387968651_0_01 [penwidth=2, color="#112c5f"] 
+
+K_T_3 -> System_3_16139349544387968651_0_01 [penwidth=2, color="#112c5f"] 
+
+Mapper_1_11901977823854601366_0_3 -> s_1 [penwidth=3, color="#8f100d"] 
+
+Mapper_1_6202930901620302023_0 -> p_1 [penwidth=3, color="#8f100d"] 
+
+Protrusion_1_0_3 -> prot_0 [penwidth=3, color="#8f100d"] 
+
+R_0 -> Logger_0_5 [penwidth=2, color="#112c5f"] 
+
+R_0 -> R_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+R_1 -> Mapper_1_6202930901620302023_0 [penwidth=2, color="#112c5f"] 
+
+R_1 -> R_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+R_1 -> StarConvex_1 [penwidth=2, color="#112c5f"] 
+
+R_1 -> System_3_16139349544387968651_0_01 [penwidth=2, color="#112c5f"] 
+
+R_i_0 -> Logger_0_5 [penwidth=2, color="#112c5f"] 
+
+R_i_0 -> R_i_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+R_i_1 -> R_i_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+Rho_0 -> Logger_0_5 [penwidth=2, color="#112c5f"] 
+
+Rho_0 -> Rho_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+Rho_1 -> Rho_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+Rho_1 -> StarConvex_1 [penwidth=2, color="#112c5f"] 
+
+Rho_1 -> System_2_12167910147695108538_0_01 [penwidth=2, color="#112c5f"] 
+
+Rho_i_0 -> Logger_0_5 [penwidth=2, color="#112c5f"] 
+
+Rho_i_0 -> Rho_i_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+Rho_i_1 -> Rho_i_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+System_2_12167910147695108538_0_01 -> H_1 [penwidth=3, color="#8f100d"] 
+
+System_2_12167910147695108538_0_01 -> P2_1 [penwidth=3, color="#8f100d"] 
+
+System_2_12167910147695108538_0_01 -> P3_1 [penwidth=3, color="#8f100d"] 
+
+System_2_12167910147695108538_0_01 -> R_1 [penwidth=3, color="#8f100d"] 
+
+System_2_12167910147695108538_0_01 -> R_i_1 [penwidth=3, color="#8f100d"] 
+
+System_3_16139349544387968651_0_01 -> Rho_1 [penwidth=3, color="#8f100d"] 
+
+System_3_16139349544387968651_0_01 -> Rho_i_1 [penwidth=3, color="#8f100d"] 
+
+System_4_0_01 -> Area_1 [penwidth=3, color="#8f100d"] 
+
+System_4_0_01 -> Perimeter_1 [penwidth=3, color="#8f100d"] 
+
+System_4_0_01 -> Tension_1 [penwidth=3, color="#8f100d"] 
+
+T_0_1 -> System_3_16139349544387968651_0_01 [penwidth=2, color="#112c5f"] 
+
+Tension_0 -> Logger_0_5 [penwidth=2, color="#112c5f"] 
+
+Tension_1 -> System_3_16139349544387968651_0_01 [penwidth=2, color="#112c5f"] 
+
+Tension_1 -> Tension_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+U_0 -> Gnuplotter_0_11462362174534698831_10 [penwidth=2, color="#112c5f"] 
+
+U_0 -> Mapper_1_11901977823854601366_0_3 [penwidth=2, color="#112c5f"] 
+
+cell_center_0 -> CellTracker_0_1 [penwidth=2, color="#112c5f"] 
+
+cell_center_1 -> Mapper_1_11901977823854601366_0_3 [penwidth=2, color="#112c5f"] 
+
+cell_center_1 -> Mapper_1_6202930901620302023_0 [penwidth=2, color="#112c5f"] 
+
+cell_center_1 -> cell_center_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+cell_surface_1 -> System_4_0_01 [penwidth=2, color="#112c5f"] 
+
+cell_type_0 -> Gnuplotter_0_11462362174534698831_10 [penwidth=2, color="#112c5f"] 
+
+cell_type_1 -> cell_type_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+cell_volume_1 -> System_4_0_01 [penwidth=2, color="#112c5f"] 
+
+delta_2 -> System_2_12167910147695108538_0_01 [penwidth=2, color="#112c5f"] 
+
+delta_rho_3 -> System_3_16139349544387968651_0_01 [penwidth=2, color="#112c5f"] 
+
+gamma_2 -> System_2_12167910147695108538_0_01 [penwidth=2, color="#112c5f"] 
+
+gamma_rho_3 -> System_3_16139349544387968651_0_01 [penwidth=2, color="#112c5f"] 
+
+k_0_2 -> System_2_12167910147695108538_0_01 [penwidth=2, color="#112c5f"] 
+
+k_0_rho_3 -> System_3_16139349544387968651_0_01 [penwidth=2, color="#112c5f"] 
+
+k_1_2 -> System_2_12167910147695108538_0_01 [penwidth=2, color="#112c5f"] 
+
+k_1_rho_3 -> System_3_16139349544387968651_0_01 [penwidth=2, color="#112c5f"] 
+
+m_0 -> m_phi_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+m_phi_0 -> Logger_0_5 [penwidth=2, color="#112c5f"] 
+
+n_2 -> System_2_12167910147695108538_0_01 [penwidth=2, color="#112c5f"] 
+
+n_3 -> System_3_16139349544387968651_0_01 [penwidth=2, color="#112c5f"] 
+
+n_T_3 -> System_3_16139349544387968651_0_01 [penwidth=2, color="#112c5f"] 
+
+prot_0 -> Protrusion_1_0_3 [penwidth=2, color="#112c5f"] 
+
+s_0 -> Logger_0_5 [penwidth=2, color="#112c5f"] 
+
+s_1 -> System_2_12167910147695108538_0_01 [penwidth=2, color="#112c5f"] 
+
+s_1 -> s_0 [dir=none, style="dashed", penwidth=1, color="#38568c"] 
+
+s_1_2 -> System_2_12167910147695108538_0_01 [penwidth=2, color="#112c5f"] 
+
+s_1_rho_3 -> System_3_16139349544387968651_0_01 [penwidth=2, color="#112c5f"] 
+
+targ_Perimeter_1 -> System_4_0_01 [penwidth=2, color="#112c5f"] 
+
+}
