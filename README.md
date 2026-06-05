@@ -127,13 +127,17 @@ To analyze your own Morpheus simulation outputs:
 
 ### Folder Naming Convention
 
-The pipeline extracts model type and simulation ID from folder names following the pattern:
+The pipeline extracts the model type and simulation ID from folder names following the pattern:
 ```
-{Prefix}_{ModelType}_{Rest}_{SimulationID}
+{ModelType}_{Rest}_{SimulationID}
 ```
 For example:
 - `WP_Track_Collision_TrackB_1` → Model: `WP`, ID: `1`
 - `RacRho_Collision_TrackB_1759` → Model: `RacRho`, ID: `1759`
+
+Specifically:
+- **Model Type**: The folder name must start directly with one of the supported model strings: `WP`, `WPI`, `WPIPIP3`, `RacRho`, or `RacRho_T`. The parser extracts this via `.startswith(...)` checks.
+- **Simulation ID**: The folder name must end with the numeric simulation ID (e.g., `1`, `1759`). The parser extracts this by searching for trailing digits.
 
 ## Utility Scripts
 
