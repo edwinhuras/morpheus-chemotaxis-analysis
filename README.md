@@ -118,6 +118,7 @@ To analyze your own Morpheus simulation outputs:
    - `model.xml` — Morpheus simulation configuration
    - `plot_*.png` — Visualization output frames
    - `celltracks.xml` — Cell tracking data (optional but recommended)
+   - `*.tiff` — Track boundary domain image (required for cell shape visualization backgrounds)
 
 2. In `01_bulk_collision_analysis.ipynb`, update the configuration cell:
    ```python
