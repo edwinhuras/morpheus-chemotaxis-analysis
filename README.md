@@ -25,8 +25,9 @@ cd notebooks
 jupyter notebook
 ```
 
-1. Open and run **`01_bulk_collision_analysis.ipynb`** — processes the sample simulation data and produces summary/detailed CSV files in `output/`.
+1. Open and run **`01_bulk_collision_analysis.ipynb`** — processes the sample simulation data and produces summary/detailed PKL and CSV files in `output/`.
 2. Open and run **`02_visualize_results.ipynb`** — loads the processed data and generates overview plots, distribution analyses, and statistical comparisons.
+3. Open and run **`03_cell_shape_visuals.ipynb`** — produces cell shape snapshots overlaid on the track boundary, and collision intensity over time colored by progress.
 
 ## Repository Structure
 
@@ -55,7 +56,8 @@ morpheus-chemotaxis-analysis/
 │
 ├── notebooks/                         # Analysis notebooks
 │   ├── 01_bulk_collision_analysis.ipynb
-│   └── 02_visualize_results.ipynb
+│   ├── 02_visualize_results.ipynb
+│   └── 03_cell_shape_visuals.ipynb
 │
 └── output/                            # Generated results (gitignored)
 ```
@@ -102,6 +104,11 @@ The visualization notebook (`02_visualize_results.ipynb`) loads the processed da
 - **Timeseries plots**: Per-simulation collision intensity over time.
 - **X-position distributions**: Histograms of lateral cell position during active migration.
 - **Statistical comparisons**: Pairwise t-tests between model types.
+
+The cell shape visuals notebook (`03_cell_shape_visuals.ipynb`) creates high-quality spatial and temporal plots:
+
+- **Filled Cell Snapshots**: Alpha-composited cell masks overlaid onto the physical track boundary, colored by time (viridis colormap) and smoothed with a Gaussian filter.
+- **Collision Intensity**: A temporal plot of collision intensity under-filled with the corresponding viridis progression.
 
 ## Using Your Own Data
 
