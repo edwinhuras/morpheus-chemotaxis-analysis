@@ -1,6 +1,6 @@
 <MorpheusModel version="4">
     <Description>
-        <Title>Figure6_WP_Maze_Collision</Title>
+        <Title>WP_Track_Collision</Title>
         <Details>Chemotaxis of polarized cell
 ----------------------------
 Show feedback between cell motility, cell polarization and external gradient.
@@ -84,7 +84,7 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
         <BoundaryValue type="value" boundary="y" value="5.0"/>
     </Disabled>
 -->
-            <TIFFReader filename="GapsSlalom_300x450_grayscale_16bit.tiff" scaling="1.0"/>
+            <TIFFReader filename="TrackA_300x450_grayscale_16bit.tiff" scaling="1.0"/>
         </Field>
         <!--    <Disabled>
         <Event trigger="on-change" time-step="1">
@@ -116,7 +116,7 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
     </Global>
     <Space>
         <!--    <Disabled>
-        <Lattice class="square" name="GapsMaze">
+        <Lattice class="square" name="GapsTrack">
             <Size symbol="lattice" value="300, 450, 0"/>
             <BoundaryConditions>
                 <Condition type="noflux" boundary="x"/>
@@ -128,7 +128,7 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
             </Neighborhood>
             <Domain boundary-type="constant">
                 <Circle internal:disabled="true" diameter="0"/>
-                <Image path="GapsMaze01_300x450.tiff"/>
+                <Image path="GapsTrack01_300x450.tiff"/>
             </Domain>
         </Lattice>
     </Disabled>
@@ -139,7 +139,7 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
             <SpaceSymbol symbol="m"/>
         </MembraneLattice>
         <!--    <Disabled>
-        <Lattice class="square" name="SMaze">
+        <Lattice class="square" name="STrack">
             <Size symbol="lattice" value="200, 200, 0"/>
             <BoundaryConditions>
                 <Condition type="noflux" boundary="x"/>
@@ -151,13 +151,13 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
             </Neighborhood>
             <Domain boundary-type="constant">
                 <Circle internal:disabled="true" diameter="0"/>
-                <Image path="S_Maze_200x200.tiff"/>
+                <Image path="S_Track_200x200.tiff"/>
             </Domain>
         </Lattice>
     </Disabled>
 -->
         <!--    <Disabled>
-        <Lattice class="square" name="ZigZagMaze">
+        <Lattice class="square" name="ZigZagTrack">
             <Size symbol="lattice" value="400, 400, 0"/>
             <BoundaryConditions>
                 <Condition type="noflux" boundary="x"/>
@@ -169,13 +169,13 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
             </Neighborhood>
             <Domain boundary-type="constant">
                 <Circle internal:disabled="true" diameter="0"/>
-                <Image path="ZigZagMaze_400x400_FIXED.tiff"/>
+                <Image path="ZigZagTrack_400x400_FIXED.tiff"/>
             </Domain>
         </Lattice>
     </Disabled>
 -->
         <!--    <Disabled>
-        <Lattice class="square" name="Slalom">
+        <Lattice class="square" name="TrackB">
             <Size symbol="lattice" value="300, 450, 0"/>
             <BoundaryConditions>
                 <Condition type="noflux" boundary="x"/>
@@ -187,12 +187,12 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
             </Neighborhood>
             <Domain boundary-type="constant">
                 <Circle internal:disabled="true" diameter="0"/>
-                <Image path="SlalomMedium_300x450.tiff"/>
+                <Image path="TrackB_300x450.tiff"/>
             </Domain>
         </Lattice>
     </Disabled>
 -->
-        <Lattice class="square" name="GapsSlalom">
+        <Lattice class="square" name="TrackA">
             <Size symbol="lattice" value="300, 450, 0"/>
             <BoundaryConditions>
                 <Condition type="noflux" boundary="x"/>
@@ -207,7 +207,7 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
         <Circle diameter="0"/>
     </Disabled>
 -->
-                <Image path="GapsSlalom_300x450.tiff"/>
+                <Image path="TrackA_300x450.tiff"/>
             </Domain>
         </Lattice>
     </Space>
@@ -220,12 +220,6 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
     </Disabled>
 -->
         <TimeSymbol symbol="time"/>
-        <!--    <Disabled>
-        <StopCondition>
-            <Condition>time > 1000 &amp;&amp; cell.center.y &lt; 0.1 * lattice.y</Condition>
-        </StopCondition>
-    </Disabled>
--->
     </Time>
     <CellTypes>
         <!--    <Disabled>
@@ -780,7 +774,7 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
     </Disabled>
 -->
         <!--    <Disabled>
-        <Population type="cells" size="0" name="ZigZagMaze">
+        <Population type="cells" size="0" name="ZigZagTrack">
             <InitCellObjects mode="distance">
                 <Arrangement displacements="1, 1, 0" repetitions="1, 1, 0">
                     <Sphere radius="21" center="lattice.x*0.5, 0.05*lattice.y, 0"/>
@@ -790,7 +784,7 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
     </Disabled>
 -->
         <!--    <Disabled>
-        <Population type="cells" size="1" name="GapsMaze">
+        <Population type="cells" size="1" name="GapsTrack">
             <InitCellObjects mode="distance">
                 <Arrangement displacements="1, 1, 0" repetitions="1, 1, 0">
                     <Sphere radius="21" center="lattice.x*0.5, 0.95*lattice.y, 0"/>
@@ -800,7 +794,7 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
     </Disabled>
 -->
         <!--    <Disabled>
-        <Population type="cells" size="1" name="SMaze">
+        <Population type="cells" size="1" name="STrack">
             <InitCellObjects mode="distance">
                 <Arrangement displacements="1, 1, 0" repetitions="1, 1, 0">
                     <Sphere radius="21" center="lattice.x*0.1, 0.9*lattice.y, 0"/>
@@ -810,7 +804,7 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
     </Disabled>
 -->
         <!--    <Disabled>
-        <Population type="cells" size="0" name="Slalom">
+        <Population type="cells" size="0" name="TrackB">
             <InitCellObjects mode="distance">
                 <Arrangement displacements="1, 1, 0" repetitions="1, 1, 0">
                     <Sphere radius="21" center="lattice.x*0.25, 0.05*lattice.y, 0"/>
@@ -819,7 +813,7 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
         </Population>
     </Disabled>
 -->
-        <Population type="cells" size="0" name="GapsSlalom">
+        <Population type="cells" size="0" name="TrackA">
             <InitCellObjects mode="distance">
                 <Arrangement displacements="1, 1, 0" repetitions="1, 1, 0">
                     <Sphere radius="21" center="lattice.x*0.05, 0.05*lattice.y, 0"/>
@@ -828,7 +822,6 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
         </Population>
     </CellPopulations>
     <Analysis>
-        <!--    <Disabled>
         <Gnuplotter time-step="10" decorate="false">
             <Terminal name="png"/>
             <Plot title="Active Protein &amp; Light Stimulus">
@@ -841,28 +834,32 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
                         <Color value="0" color="black"/>
                     </ColorMap>
                 </Field>
-                <Cells internal:disabled="true" value="cell.type"/>
-            </Plot>
-            <Plot internal:disabled="true" title="Protrusion Field">
-                <Cells value="A">
-                    <ColorMap>
-                        <Color value="0" color="plum"/>
-                        <Color value="600" color="blue"/>
-                        <Color value="2300" color="green"/>
-                        <Color value="3000" color="yellow"/>
-                    </ColorMap>
-                </Cells>
-                <CellArrows orientation="p * 60" internal:disabled="true"/>
-                <Field symbol-ref="prot">
-                    <ColorMap>
-                        <Color value="0" color="white"/>
-                        <Color value="30" color="black"/>
-                    </ColorMap>
-                </Field>
-            </Plot>
-        </Gnuplotter>
+                <!--    <Disabled>
+        <Cells value="cell.type"/>
     </Disabled>
 -->
+            </Plot>
+            <!--    <Disabled>
+        <Plot title="Protrusion Field">
+            <Cells value="A">
+                <ColorMap>
+                    <Color value="0" color="plum"/>
+                    <Color value="600" color="blue"/>
+                    <Color value="2300" color="green"/>
+                    <Color value="3000" color="yellow"/>
+                </ColorMap>
+            </Cells>
+            <CellArrows orientation="p * 60" internal:disabled="true"/>
+            <Field symbol-ref="prot">
+                <ColorMap>
+                    <Color value="0" color="white"/>
+                    <Color value="30" color="black"/>
+                </ColorMap>
+            </Field>
+        </Plot>
+    </Disabled>
+-->
+        </Gnuplotter>
         <!--    <Disabled>
         <Gnuplotter time-step="5" decorate="false">
             <Terminal name="png"/>
@@ -934,45 +931,45 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
             <Output>
                 <TextOutput/>
             </Output>
-            <!--    <Disabled>
-        <Plots>
-            <Plot time-step="1">
-                <Style style="points"/>
-                <Terminal terminal="png"/>
-                <X-axis maximum="6.283">
-                    <Symbol symbol-ref="m.phi"/>
-                </X-axis>
-                <Y-axis minimum="0.0" maximum="3">
-                    <Symbol symbol-ref="A"/>
-                    <Symbol symbol-ref="B"/>
-                    <Symbol symbol-ref="s"/>
-                    <Symbol symbol-ref="H"/>
-                    <Symbol symbol-ref="P3"/>
-                </Y-axis>
-                <Range>
-                    <Time mode="current"/>
-                </Range>
-            </Plot>
-            <Plot time-step="1" internal:disabled="true">
-                <Style style="points"/>
-                <Terminal terminal="png"/>
-                <X-axis maximum="6.283">
-                    <Symbol symbol-ref="m.phi"/>
-                </X-axis>
-                <Y-axis minimum="-1" maximum="1">
-                    <Symbol symbol-ref="A" internal:disabled="true"/>
-                    <Symbol symbol-ref="rate1"/>
-                    <Symbol symbol-ref="U"/>
-                    <Symbol symbol-ref="rate"/>
-                    <Symbol symbol-ref="P3"/>
-                </Y-axis>
-                <Range>
-                    <Time mode="current"/>
-                </Range>
-            </Plot>
-        </Plots>
+            <Plots>
+                <Plot time-step="1">
+                    <Style style="points"/>
+                    <Terminal terminal="png"/>
+                    <X-axis maximum="6.283">
+                        <Symbol symbol-ref="m.phi"/>
+                    </X-axis>
+                    <Y-axis minimum="0.0" maximum="3">
+                        <Symbol symbol-ref="A"/>
+                        <Symbol symbol-ref="B"/>
+                        <Symbol symbol-ref="s"/>
+                        <Symbol symbol-ref="H"/>
+                        <Symbol symbol-ref="P3"/>
+                    </Y-axis>
+                    <Range>
+                        <Time mode="current"/>
+                    </Range>
+                </Plot>
+                <!--    <Disabled>
+        <Plot time-step="1">
+            <Style style="points"/>
+            <Terminal terminal="png"/>
+            <X-axis maximum="6.283">
+                <Symbol symbol-ref="m.phi"/>
+            </X-axis>
+            <Y-axis minimum="-1" maximum="1">
+                <Symbol symbol-ref="A" internal:disabled="true"/>
+                <Symbol symbol-ref="rate1"/>
+                <Symbol symbol-ref="U"/>
+                <Symbol symbol-ref="rate"/>
+                <Symbol symbol-ref="P3"/>
+            </Y-axis>
+            <Range>
+                <Time mode="current"/>
+            </Range>
+        </Plot>
     </Disabled>
 -->
+            </Plots>
         </Logger>
         <ModelGraph format="dot" reduced="false" include-tags="#untagged"/>
         <!--    <Disabled>
@@ -1050,17 +1047,5 @@ Y. Mori, A. Jilkine and L. Edelstein-Keshet (2008). Wave-Pinning and Cell Polari
                 </Field>
             </Plot>
         </Gnuplotter>
-        <Logger time-step="1.0">
-            <Input>
-                <Symbol symbol-ref="cell.center.x"/>
-                <Symbol symbol-ref="cell.center.y"/>
-                <Symbol symbol-ref="cell.surface"/>
-                <Symbol symbol-ref="cell.volume"/>
-                <Symbol symbol-ref="cell.length"/>
-            </Input>
-            <Output>
-                <TextOutput file-name="cell_position"/>
-            </Output>
-        </Logger>
     </Analysis>
 </MorpheusModel>
