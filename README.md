@@ -26,7 +26,7 @@ jupyter notebook
 ```
 
 1. Open and run **`01_bulk_collision_analysis.ipynb`** — processes the sample simulation data and produces summary/detailed PKL and CSV files in `output/`.
-2. Open and run **`02_visualize_results.ipynb`** — loads the processed data and generates overview plots, distribution analyses, and statistical comparisons.
+2. Open and run **`02_visualize_results.ipynb`** — loads the processed data and generates overview plots comparing mean collision intensity and track progress across models.
 3. Open and run **`03_cell_shape_visuals.ipynb`** — produces cell shape snapshots overlaid on the track boundary, and collision intensity over time colored by progress.
 
 ## Repository Structure
@@ -80,9 +80,7 @@ Simulation Folders                     Analysis Output
 │  └ Green overlap     │──► Collision   ┌──────────────────────┐
 └──────────────────────┘    metrics     │ Visualizations       │
                                         │  ├ Overview panels   │
-                                        │  ├ Box plots         │
-                                        │  ├ Scatter plots     │
-                                        │  └ t-test tables     │
+                                        │  └ Scatter plots     │
                                         └──────────────────────┘
 ```
 
