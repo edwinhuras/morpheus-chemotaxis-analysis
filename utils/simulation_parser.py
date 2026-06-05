@@ -6,7 +6,7 @@ Functions for extracting metadata and tracking data from Morpheus simulation
 output folders. Each simulation folder typically contains:
 - model.xml      — Simulation configuration (domain size, gradient, etc.)
 - celltracks.xml — Cell centroid trajectories over time
-- plot_*.png     — Visualization frames of the cell in the maze
+- plot_*.png     — Visualization frames of the cell in the track
 """
 
 import os
@@ -26,7 +26,7 @@ from .image_processing import analyze_png_colors
 def parse_model_xml(model_path: str) -> Dict[str, Any]:
     """Extract simulation metadata from a Morpheus model.xml file.
 
-    Parses domain dimensions, maze type, gradient parameters, and MCS duration
+    Parses domain dimensions, track type, gradient parameters, and MCS duration
     from the XML configuration used to run the simulation.
 
     Args:
@@ -36,7 +36,7 @@ def parse_model_xml(model_path: str) -> Dict[str, Any]:
         Dictionary with keys:
             - width, height: Domain dimensions (strings, as parsed)
             - domain_file: Filename of the domain image
-            - maze_type: Cleaned maze type name
+            - track_type: Cleaned track type name
             - gradient_file: Filename of the gradient TIFF
             - gradient_scale: Scaling factor for the gradient field
             - mcs_duration: Monte Carlo Sampler duration (float or None)
@@ -45,7 +45,7 @@ def parse_model_xml(model_path: str) -> Dict[str, Any]:
         'width': '',
         'height': '',
         'domain_file': '',
-        'maze_type': '',
+        'track_type': '',
         'gradient_file': '',
         'gradient_scale': 1.0,
         'mcs_duration': None,
@@ -70,8 +70,8 @@ def parse_model_xml(model_path: str) -> Dict[str, Any]:
         if image_elem is not None and 'path' in image_elem.attrib:
             result['domain_file'] = image_elem.attrib['path']
             domain_base = os.path.splitext(result['domain_file'])[0]
-            maze_type = domain_base.replace('_domain', '').replace('domain_', '')
-            result['maze_type'] = maze_type.replace('Domain', '').strip('_')
+            track_type = domain_base.replace('_domain', '').replace('domain_', '')
+            result['track_type'] = track_type.replace('Domain', '').strip('_')
 
         # Gradient field from <Field[@symbol="U"]/TIFFReader>
         tiff_reader = root.find('.//Field[@symbol="U"]/TIFFReader')
@@ -153,7 +153,7 @@ def find_correct_png_pattern(data_folder: str, verbose: bool = False) -> str:
 
     Morpheus can output frames with different prefixes (plot_, plot-1_,
     plot-2_, plot-3_). This function samples files from each pattern and
-    validates them by checking color content (must contain white maze paths
+    validates them by checking color content (must contain white track paths
     and green boundaries).
 
     Args:
@@ -233,7 +233,7 @@ def extract_simulation_id(folder_name: str) -> Optional[str]:
     """Extract the numeric simulation ID from a folder name.
 
     Handles naming conventions like:
-    - WP_Maze_Collision_TrackB_1
+    - WP_Track_Collision_TrackB_1
     - RacRho_Collision_TrackB_1759
 
     Args:
@@ -251,7 +251,7 @@ def extract_model_type(folder_name: str) -> str:
 
     Parses folder names based on expected prefixes.
     For example:
-        WP_Maze_Collision_TrackB_1  →  WP
+        WP_Track_Collision_TrackB_1  →  WP
         RacRho_Collision_...        →  RacRho
 
     Args:
@@ -268,11 +268,11 @@ def extract_model_type(folder_name: str) -> str:
 
 
 # ---------------------------------------------------------------------------
-# Maze Type Fallback
+# Track Type Fallback
 # ---------------------------------------------------------------------------
 
-def extract_maze_type_from_tiffs(folder_path: str) -> str:
-    """Attempt to extract maze type from TIFF filenames as a fallback.
+def extract_track_type_from_tiffs(folder_path: str) -> str:
+    """Attempt to extract track type from TIFF filenames as a fallback.
 
     Used when model.xml does not contain domain information.
 
@@ -280,7 +280,7 @@ def extract_maze_type_from_tiffs(folder_path: str) -> str:
         folder_path: Path to the simulation folder.
 
     Returns:
-        Maze type string, or empty string if not found.
+        Track type string, or empty string if not found.
     """
     tiff_files = glob(os.path.join(folder_path, '*.tiff'))
 
@@ -289,8 +289,8 @@ def extract_maze_type_from_tiffs(folder_path: str) -> str:
         tiff_base = os.path.basename(tiff)
         if 'domain' in tiff_base.lower():
             base = os.path.splitext(tiff_base)[0]
-            maze_type = base.replace('_domain', '').replace('domain_', '')
-            return maze_type.replace('Domain', '').strip('_')
+            track_type = base.replace('_domain', '').replace('domain_', '')
+            return track_type.replace('Domain', '').strip('_')
 
     # Fall back to any TIFF file
     for tiff in tiff_files:
@@ -313,7 +313,7 @@ def get_progress_from_centroids(
     centroids: List[Tuple[int, float, float]],
     domain_height: Any,
 ) -> Tuple[float, float]:
-    """Compute maze progress from centroid trajectory.
+    """Compute track progress from centroid trajectory.
 
     Progress is defined as the maximum Y-coordinate reached divided by the
     domain height, expressed as a percentage.
@@ -323,7 +323,7 @@ def get_progress_from_centroids(
         domain_height: Domain height (will be converted to float).
 
     Returns:
-        Tuple of (max_y_position, maze_progress_percentage).
+        Tuple of (max_y_position, track_progress_percentage).
     """
     if not centroids or not domain_height:
         return 0.0, 0.0

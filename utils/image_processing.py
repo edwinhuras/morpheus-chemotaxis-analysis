@@ -7,8 +7,8 @@ extraction from Morpheus CPM simulation output images.
 
 Morpheus outputs PNG images where:
 - Black pixels (RGB ~0,0,0) represent the cell body
-- Green pixels (RGB ~0,255,0) represent maze boundaries
-- White pixels (RGB ~255,255,255) represent open maze paths
+- Green pixels (RGB ~0,255,0) represent track boundaries
+- White pixels (RGB ~255,255,255) represent open track paths
 """
 
 import numpy as np
@@ -37,7 +37,7 @@ def load_color_image(filepath: str) -> np.ndarray:
 def analyze_png_colors(filepath: str) -> Tuple[float, float, bool]:
     """Analyze a PNG's color content to verify it is a valid simulation frame.
 
-    Checks for expected proportions of white (maze path) and green (boundary)
+    Checks for expected proportions of white (track path) and green (boundary)
     pixels. A valid frame has >30% white and >1% green.
 
     Args:
@@ -108,7 +108,7 @@ def detect_green_pixels(
     image: np.ndarray,
     tolerance: int = 50,
 ) -> np.ndarray:
-    """Create a binary mask of maze boundary (green) pixels.
+    """Create a binary mask of track boundary (green) pixels.
 
     Args:
         image: BGR image array.
@@ -128,7 +128,7 @@ def detect_green_pixels(
 
 
 def detect_collision(image: np.ndarray) -> bool:
-    """Check whether the cell is touching a maze boundary.
+    """Check whether the cell is touching a track boundary.
 
     Dilates the cell mask by 1 pixel (3×3 kernel) to detect adjacency,
     then checks for overlap with the boundary mask.
@@ -149,7 +149,7 @@ def get_collision_intensity(
     green_tolerance: int = 50,
     border_exclude: int = 1,
 ) -> Tuple[bool, float, int]:
-    """Compute collision metrics between cell and maze boundary.
+    """Compute collision metrics between cell and track boundary.
 
     The cell mask is dilated by 1 pixel (3×3 kernel, 1 iteration) to detect
     adjacency. Collision intensity is defined as the fraction of total boundary

@@ -2,7 +2,7 @@
 
 Analysis pipeline for quantifying cell-boundary collisions in Morpheus CPM (Cellular Potts Model) simulations of chemotaxis through complex track environments. Developed for the study of how different intracellular regulatory circuits (Rac frontness circuits, Rac-Rho mutual antagonism, and membrane tension feedback) affect navigation performance in confined channels with sharp turns and weak chemical gradients.
 
-Processes simulation outputs — including cell centroid tracking, collision detection via morphological dilation, and maze progress calculation — to produce summary statistics and publication-quality visualizations comparing model types.
+Processes simulation outputs — including cell centroid tracking, collision detection via morphological dilation, and track progress calculation — to produce summary statistics and publication-quality visualizations comparing model types.
 
 > **Paper:** Huras E, Algorta J, De Belly H, Weiner OD, Edelstein-Keshet L. *Mechanochemical Feedback Enables Efficient Navigation in Complex Chemical Gradients.* (2026)
 >
@@ -38,8 +38,8 @@ morpheus-chemotaxis-analysis/
 │
 ├── data/
 │   └── sample_simulations/            # Sample Morpheus output (10 simulations)
-│       ├── WP_Maze_.../       #   2 simulations per model type
-│       ├── WPI_Maze_.../      #   Each contains model.xml,
+│       ├── WP_Track_.../       #   2 simulations per model type
+│       ├── WPI_Track_.../      #   Each contains model.xml,
 │       ├── WPIPIP3_.../       #   celltracks.xml, and plot PNGs
 │       ├── RacRho_.../
 │       └── RacRho_T_.../
@@ -88,11 +88,11 @@ Simulation Folders                     Analysis Output
 
 The processing notebook (`01_bulk_collision_analysis.ipynb`) iterates over simulation folders and for each one:
 
-1. **Parses `model.xml`** to extract domain dimensions, maze type, gradient parameters, and simulation duration.
+1. **Parses `model.xml`** to extract domain dimensions, track type, gradient parameters, and simulation duration.
 2. **Extracts cell trajectories** from `celltracks.xml` (preferred) or falls back to image-based centroid detection using black pixel segmentation.
 3. **Discovers PNG frames** by testing naming patterns (`plot_`, `plot-1_`, etc.) and validating color content.
 4. **Detects collisions** per frame by dilating the cell body mask (3×3 kernel, equivalent to checking the 8-pixel neighborhood) and checking overlap with green boundary pixels. A collision occurs when any pixel of the cell's perimeter is adjacent to a track boundary pixel.
-5. **Computes summary metrics**: collision percentage (fraction of frames with ≥1 collision), collision intensity (collision pixels / total boundary pixels), and maze progress (max Y-position / domain height).
+5. **Computes summary metrics**: collision percentage (fraction of frames with ≥1 collision), collision intensity (collision pixels / total boundary pixels), and track progress (max Y-position / domain height).
 
 ### Step 2: Visualization & Statistics
 
@@ -127,7 +127,7 @@ The pipeline extracts model type and simulation ID from folder names following t
 {Prefix}_{ModelType}_{Rest}_{SimulationID}
 ```
 For example:
-- `WP_Maze_Collision_TrackB_1` → Model: `WP`, ID: `1`
+- `WP_Track_Collision_TrackB_1` → Model: `WP`, ID: `1`
 - `RacRho_Collision_TrackB_1759` → Model: `RacRho`, ID: `1759`
 
 ## Utility Scripts
@@ -155,8 +155,8 @@ Morpheus outputs 24-bit RGB PNG images with the following color encoding:
 | Feature        | RGB Value     | Detection Tolerance |
 |----------------|---------------|---------------------|
 | Cell body      | (0, 0, 0)     | ±10 per channel     |
-| Maze boundary  | (0, 255, 0)   | ±50 per channel     |
-| Maze path      | (255, 255, 255) | > 200 (validation) |
+| Track boundary  | (0, 255, 0)   | ±50 per channel     |
+| Track path      | (255, 255, 255) | > 200 (validation) |
 
 ## Dependencies
 
