@@ -246,25 +246,32 @@ def extract_simulation_id(folder_name: str) -> Optional[str]:
     return match.group(1) if match else folder_name
 
 
-def extract_model_type(folder_name: str) -> str:
+def extract_model_type(folder_name: str, expected_models: list) -> str:
     """Extract the model type from a simulation folder name.
 
-    Parses folder names based on expected prefixes.
+    Parses folder names by splitting on underscores and checking against expected models.
     For example:
         WP_Track_Collision_TrackB_1  →  WP
-        RacRho_Collision_...        →  RacRho
+        Rac-Rho_Collision_...        →  Rac-Rho
+        Figure6_WPIPIP3_Collision   →  WPIPIP3
 
     Args:
         folder_name: Base name of the simulation folder.
+        expected_models: List of expected model strings to search for.
 
     Returns:
-        Model type string, or empty string if not found.
+        Model type string, or the first part of the folder name if not found.
     """
-    expected_models = ['WPIPIP3', 'WPI', 'WP', 'RacRho_T', 'RacRho']
+    parts = folder_name.split('_')
+    
     for model in expected_models:
-        if folder_name.startswith(model):
+        if model in parts:
             return model
-    return ''
+            
+    # Default fallback
+    default_model = parts[0] if parts else ''
+    print(f"  Warning: No expected model found in '{folder_name}'. Defaulting to '{default_model}'.")
+    return default_model
 
 
 # ---------------------------------------------------------------------------

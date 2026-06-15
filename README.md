@@ -4,9 +4,9 @@ Analysis pipeline for quantifying cell-boundary collisions in Morpheus CPM (Cell
 
 Processes simulation outputs — including cell centroid tracking, collision detection via morphological dilation, and track progress calculation — to produce summary statistics and publication-quality visualizations comparing model types.
 
-> **Paper:** Huras E, Algorta J, De Belly H, Weiner OD, Edelstein-Keshet L. *Mechanochemical Feedback Enables Efficient Navigation in Complex Chemical Gradients.* (2026)
+> **Manuscript in Preparation:** Huras E, Algorta J, De Belly H, Weiner OD, Edelstein-Keshet L. *Mechanochemical Feedback Enables Efficient Navigation in Complex Chemical Gradients.*
 >
-> **Models compared:** WP (Wave Pinning), WPI (WP + Inhibitor), WPI-PIP3 (WP + Inhibitor + PIP3), RacRho (Rac-Rho mutual antagonism), RacRho_T (RacRho + membrane tension feedback)
+> **Models compared:** WP (Wave Pinning), WPI (WP + Inhibitor), WPI-PIP3 (WP + Inhibitor + PIP3), Rac-Rho (Rac-Rho mutual antagonism), Rac-Rho-T (Rac-Rho + membrane tension feedback)
 
 ## Quick Start
 
@@ -41,9 +41,9 @@ morpheus-chemotaxis-analysis/
 │   └── sample_simulations/            # Sample Morpheus output (10 simulations)
 │       ├── WP_Track_.../       #   2 simulations per model type
 │       ├── WPI_Track_.../      #   Each contains model.xml,
-│       ├── WPIPIP3_.../       #   celltracks.xml, and plot PNGs
-│       ├── RacRho_.../
-│       └── RacRho_T_.../
+│       ├── WPI-PIP3_.../       #   celltracks.xml, and plot PNGs
+│       ├── Rac-Rho_.../
+│       └── Rac-Rho-T_.../
 │
 ├── morpheus_files/                    # Place Morpheus model XMLs here
 │
@@ -118,6 +118,7 @@ To analyze your own Morpheus simulation outputs:
    - `*.tiff` — Track boundary domain image (required for cell shape visualization backgrounds)
 
 2. In `01_bulk_collision_analysis.ipynb`, update the configuration cell:
+
    ```python
    DATA_DIR = "/path/to/your/simulation/folders"
    EXCLUDE_SIMULATION_IDS = ['bad_sim_1', 'bad_sim_2']  # if any
@@ -128,15 +129,19 @@ To analyze your own Morpheus simulation outputs:
 ### Folder Naming Convention
 
 The pipeline extracts the model type and simulation ID from folder names following the pattern:
+
 ```
 {ModelType}_{Rest}_{SimulationID}
 ```
+
 For example:
+
 - `WP_Track_Collision_TrackB_1` → Model: `WP`, ID: `1`
-- `RacRho_Collision_TrackB_1759` → Model: `RacRho`, ID: `1759`
+- `Rac-Rho_Collision_TrackB_1759` → Model: `Rac-Rho`, ID: `1759`
 
 Specifically:
-- **Model Type**: The folder name must start directly with one of the supported model strings: `WP`, `WPI`, `WPIPIP3`, `RacRho`, or `RacRho_T`. The parser extracts this via `.startswith(...)` checks.
+
+- **Model Type**: The pipeline expects standard names like `WP`, `WPI`, `WPI-PIP3`, `Rac-Rho`, or `Rac-Rho-T` inside the folder name. The parser extracts this by checking for an expected model string anywhere in the folder name, falling back to the first part if not found.
 - **Simulation ID**: The folder name must end with the numeric simulation ID (e.g., `1`, `1759`). The parser extracts this by searching for trailing digits.
 
 ## Utility Scripts

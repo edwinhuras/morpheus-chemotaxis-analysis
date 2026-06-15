@@ -1,0 +1,259 @@
+<MorpheusModel version="4">
+    <Description>
+    <Title>Rac-Rho-Tension (Rac-Rho-T) Model</Title>
+    <Details>Model ID:	[To be assigned]
+  File type:	Supplementary model
+  Software:	Morpheus (open source). Download from: https://morpheus.gitlab.io
+Full title:	Mechanochemical Feedback Enables Efficient Navigation in Complex Chemical Gradients
+Authors:	E. Huras, J. Algorta, H. De Belly, O. D. Weiner, L. Edelstein-Keshet
+Submitter:	Edwin Huras
+Curator:	[Your Name]
+Date:	[Current Date]
+Reference:	Morpheus implementation sourced from the repository associated with:
+	J. Algorta, J. P. Town, O. D. Weiner, L. Edelstein-Keshet: Investigating local negative feedback of Rac activity by mathematical models and cell-motility simulations. iScience 29 (2): 114641, 2026.
+	https://doi.org/10.1016/j.isci.2026.114641
+	Original Wave-Pinning and cell polarity frameworks:
+	Y. Mori, A. Jilkine, L. Edelstein-Keshet: Wave-Pinning and Cell Polarity from a Bistable Reaction-Diffusion System. Biophysical Journal 94 (9): 3684–3697, 2008. https://doi.org/10.1529/biophysj.107.120824
+Comment:	This model extends the Rac-Rho mutual antagonism framework by incorporating global mechanical feedback from membrane tension, using cell perimeter as a proxy. Tension globally enhances Rho activation to regulate the cell.</Details>
+</Description>
+    <Global>
+        <Constant symbol="lengthscale" value="(1.5)*2*pi/132"/>
+        <Variable symbol="R" name="Active Rac" value="0.0"/>
+        <Variable symbol="R_i" name="Inactive Rac" value="0.0"/>
+        <Variable symbol="Rho" name="Active Rho" value="0.0"/>
+        <Variable symbol="Rho_i" name="Inactive Rho" value="0.0"/>
+        <Field symbol="U" value="0.0">
+            <TIFFReader filename="TrackA_300x450_grayscale_16bit.tiff" scaling="1.0"/>
+        </Field>
+        <Constant symbol="DH" value="0.04"/>
+        <Constant symbol="DP" value="0.62"/>
+        <Field symbol="prot" value="0.0"/>
+    </Global>
+    <Space>
+        <SpaceSymbol symbol="l"/>
+        <MembraneLattice>
+            <Resolution symbol="memsize" value="500"/>
+            <SpaceSymbol symbol="m"/>
+        </MembraneLattice>
+        <Lattice class="square" name="TrackA">
+            <Size symbol="lattice" value="300, 450, 0"/>
+            <BoundaryConditions>
+                <Condition type="noflux" boundary="x"/>
+                <Condition type="noflux" boundary="y"/>
+            </BoundaryConditions>
+            <NodeLength value="1.0"/>
+            <Neighborhood>
+                <Distance>2.0</Distance>
+            </Neighborhood>
+            <Domain boundary-type="constant">
+                                <Image path="TrackA_300x450.tiff"/>
+            </Domain>
+        </Lattice>
+            </Space>
+    <Time>
+        <StartTime value="0"/>
+        <StopTime value="6000"/>
+        <SaveInterval value="0"/>
+        <!--    <Disabled>
+        <RandomSeed value="600"/>
+    </Disabled>
+-->
+        <TimeSymbol symbol="time"/>
+    </Time>
+    <CellTypes>
+        <CellType class="biological" name="cells">
+            <VolumeConstraint target="1385" strength="1"/>
+            <SurfaceConstraint target="1.2" strength="0.8" mode="aspherity"/>
+            <MembraneProperty symbol="R" name="Active form of protein" value="0.5+rand_uni(-0.1,0.1)">
+                <Diffusion rate="0.12/lengthscale^2"/>
+            </MembraneProperty>
+            <MembraneProperty symbol="R_i" name="Inactive form of protein" value="7.31-rand_uni(-0.1,0.1)-0.5">
+                <Diffusion rate="1*1/lengthscale^2"/>
+            </MembraneProperty>
+            <MembraneProperty symbol="Rho" name="Active form of protein" value="0.5+rand_uni(-0.1,0.1)">
+                <Diffusion rate="0.12/lengthscale^2"/>
+            </MembraneProperty>
+            <MembraneProperty symbol="Rho_i" name="Inactive form of protein" value="7.31-rand_uni(-0.1,0.1)-0.5">
+                <Diffusion rate="1*1/lengthscale^2"/>
+            </MembraneProperty>
+            <MembraneProperty symbol="H" name="Local Rac inhibtor" value="2">
+                <Diffusion rate="0.09/lengthscale^2"/>
+            </MembraneProperty>
+            <MembraneProperty symbol="P2" value="3.08-0.93">
+                <Diffusion rate="DP/lengthscale^2"/>
+            </MembraneProperty>
+            <MembraneProperty symbol="P3" value="0.93">
+                <Diffusion rate="DP/lengthscale^2"/>
+            </MembraneProperty>
+            <System time-step="0.05" name="Rac" time-scaling="5" solver="Euler [fixed, O(1)]">
+                <Constant symbol="k_0" value="rand_norm(0.028, 0.000765)"/>
+                <Constant symbol="k_1" value="rand_norm(0.372, 0.006632)"/>
+                <Constant symbol="s_1" value="rand_norm(0.059, 0.001530)"/>
+                <Constant symbol="gamma" value="rand_norm(1.38, 0.0214)"/>
+                <Constant symbol="delta" value="rand_norm(0.721, 0.006887)"/>
+                <Constant symbol="K" value="rand_norm(2.93, 0.0408)"/>
+                <Constant symbol="n" name="Hill coefficient" value="2"/>
+                <Intermediate symbol="F" value="1*(R_i*(k_0+ s_1*(0.93+0.5*s) + (gamma) / (1 + Rho^n) ) - (delta+k_1*H)*R)"/>
+                <DiffEqn symbol-ref="R">
+                    <Expression>F</Expression>
+                </DiffEqn>
+                <DiffEqn symbol-ref="R_i">
+                    <Expression>-F</Expression>
+                </DiffEqn>
+            </System>
+            <System time-step="0.05" name="Rho" time-scaling="5" solver="Euler [fixed, O(1)]">
+                <Constant symbol="k_0_rho" value="rand_norm(0.028, 0.000765)"/>
+                <Constant symbol="k_1_rho" value="rand_norm(0.372, 0.006632)"/>
+                <Constant symbol="s_1_rho" value="rand_norm(0.059, 0.001530)"/>
+                <Constant symbol="gamma_rho" value="rand_norm(1.38, 0.0214)"/>
+                <Constant symbol="delta_rho" value="rand_norm(0.721, 0.006887)"/>
+                <Constant symbol="K_rho" value="rand_norm(2.93, 0.0408)"/>
+                <Constant symbol="K_T" name="Tension Hill function parameter" value="5.0"/>
+                <Constant symbol="n_T" name="Tension Hill coefficient" value="4"/>
+                <Constant symbol="n" name="Hill coefficient" value="2"/>
+                <Intermediate symbol="G" value="1*(Rho_i*(k_0_rho+ s_1_rho*(0.93) + (gamma_rho) / (1 + R^n) + T_0 * Tension^n_T / ( K_T ^ n_T + Tension ^ n_T ) ) - (delta_rho+k_1_rho*H)*Rho)"/>
+                <DiffEqn symbol-ref="Rho">
+                    <Expression>G</Expression>
+                </DiffEqn>
+                <DiffEqn symbol-ref="Rho_i">
+                    <Expression>-G</Expression>
+                </DiffEqn>
+            </System>
+                                    <PropertyVector symbol="p" name="polarity" value="0.0, 0.0, 0.0"/>
+            <Mapper name="Polarity extraction from membrane">
+                <Input value="R"/>
+                <Polarity symbol-ref="p"/>
+            </Mapper>
+            <StarConvex membrane="R - Rho" strength="10"/>
+            <Protrusion maximum="500" strength="10" field="prot"/>
+            <MembraneProperty symbol="s" name="signal" value="0">
+                <Diffusion rate="0"/>
+            </MembraneProperty>
+            <Mapper name="Sensing the field">
+                <Input value="U"/>
+                <Output symbol-ref="s" mapping="average"/>
+            </Mapper>
+            <Constant symbol="targ_Perimeter" value="172.0"/>
+            <Property symbol="Area" value="0.0"/>
+            <Property symbol="Perimeter" value="0.0"/>
+            <Property symbol="perimeter_diff" value="0.0"/>
+            <Constant symbol="T_0" value="3.0"/>
+            <Property symbol="Tension" value="0.0"/>
+            <System time-step="0.05" name="Tension" solver="Dormand-Prince [adaptive, O(5)]">
+                <Rule symbol-ref="Area">
+                    <Expression>cell.volume</Expression>
+                </Rule>
+                <Rule symbol-ref="Perimeter">
+                    <Expression>cell.surface</Expression>
+                </Rule>
+                <Rule symbol-ref="Tension">
+                    <Expression>if(Perimeter - targ_Perimeter > 0, Perimeter - targ_Perimeter, 0)</Expression>
+                </Rule>
+                            </System>
+        </CellType>
+    </CellTypes>
+    <CPM>
+        <Interaction default="0.0"/>
+        <MonteCarloSampler stepper="edgelist">
+            <MCSDuration value="0.3"/>
+            <Neighborhood>
+                <Order>2</Order>
+            </Neighborhood>
+            <MetropolisKinetics yield="0.05" temperature="1"/>
+        </MonteCarloSampler>
+        <ShapeSurface scaling="norm">
+            <Neighborhood>
+                <Order>6</Order>
+            </Neighborhood>
+        </ShapeSurface>
+    </CPM>
+    <CellPopulations>
+        <Population type="cells" size="0" name="TrackA">
+            <InitCellObjects mode="distance">
+                <Arrangement displacements="1, 1, 0" repetitions="1, 1, 0">
+                    <Sphere radius="21" center="lattice.x*0.05, 0.05*lattice.y, 0"/>
+                </Arrangement>
+            </InitCellObjects>
+        </Population>
+            </CellPopulations>
+        <Analysis>
+        <Gnuplotter time-step="10" decorate="false">
+            <Terminal name="png"/>
+            <Plot title="Active Protein &amp; Light Stimulus">
+                <Cells value="R"/>
+                <CellArrows orientation="p*70"/>
+                <Field symbol-ref="U" max="1" min="0">
+                    <ColorMap>
+                        <Color value="0.01" color="yellow"/>
+                        <Color value="1" color="orange"/>
+                        <Color value="0" color="black"/>
+                    </ColorMap>
+                </Field>
+            </Plot>
+        </Gnuplotter>
+        <CellTracker format="ISBI 2012 (XML)" time-step="1"/>
+        <Logger time-step="10">
+            <Input>
+                <Symbol symbol-ref="m.phi"/>
+                <Symbol symbol-ref="R"/>
+                <Symbol symbol-ref="R_i"/>
+                <Symbol symbol-ref="Rho"/>
+                <Symbol symbol-ref="Rho_i"/>
+                <Symbol symbol-ref="s"/>
+            </Input>
+            <Output>
+                <TextOutput/>
+            </Output>
+            <Plots>
+                <Plot time-step="1">
+                    <Style style="points"/>
+                    <Terminal terminal="png"/>
+                    <X-axis maximum="6.283">
+                        <Symbol symbol-ref="m.phi"/>
+                    </X-axis>
+                    <Y-axis minimum="0.0">
+                        <Symbol symbol-ref="R"/>
+                        <Symbol symbol-ref="R_i"/>
+                        <Symbol symbol-ref="Rho"/>
+                        <Symbol symbol-ref="Rho_i"/>
+                        <Symbol symbol-ref="s"/>
+                    </Y-axis>
+                    <Range>
+                        <Time mode="current"/>
+                    </Range>
+                </Plot>
+            </Plots>
+        </Logger>
+        <ModelGraph format="dot" reduced="false" include-tags="#untagged"/>
+        <Gnuplotter time-step="10" decorate="false" name="Collision detection plot">
+            <Terminal name="png"/>
+            <Plot title="Protrusion Field">
+                <Cells value="cell.type">
+                    <ColorMap>
+                        <Color value="0" color="black"/>
+                        <Color value="1" color="black"/>
+                    </ColorMap>
+                </Cells>
+                <Field symbol-ref="U">
+                    <ColorMap>
+                        <Color value="0.0001" color="white"/>
+                        <Color value="1" color="white"/>
+                        <Color value="0" color="green"/>
+                    </ColorMap>
+                </Field>
+            </Plot>
+        </Gnuplotter>
+        <Logger time-step="1.0">
+            <Input>
+                <Symbol symbol-ref="cell.center.x"/>
+                <Symbol symbol-ref="cell.center.y"/>
+                <Symbol symbol-ref="cell.surface"/>
+                <Symbol symbol-ref="cell.volume"/>
+                <Symbol symbol-ref="cell.length"/>
+            </Input>
+            <Output>
+                <TextOutput file-name="cell_position"/>
+            </Output>
+        </Logger>
+    </Analysis>
+</MorpheusModel>
