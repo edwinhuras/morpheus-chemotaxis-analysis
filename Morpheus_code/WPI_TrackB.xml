@@ -1,14 +1,14 @@
 <MorpheusModel version="4">
     <Description>
     <Title>Wave-Pinning with Inhibitor (WPI) Model</Title>
-    <Details>Model ID:	[To be assigned]
+    <Details>Model ID:	
   File type:	Supplementary model
   Software:	Morpheus (open source). Download from: https://morpheus.gitlab.io
 Full title:	Mechanochemical Feedback Enables Efficient Navigation in Complex Chemical Gradients
 Authors:	E. Huras, J. Algorta, H. De Belly, O. D. Weiner, L. Edelstein-Keshet
 Submitter:	Edwin Huras
-Curator:	[Your Name]
-Date:	[Current Date]
+Curator:	
+Date:	
 Reference:	This model is an extension of the Wave-Pinning model, introduced and implemented in:
 	J. Algorta, J. P. Town, O. D. Weiner, L. Edelstein-Keshet: Investigating local negative feedback of Rac activity by mathematical models and cell-motility simulations. iScience 29 (2): 114641, 2026.
 	https://doi.org/10.1016/j.isci.2026.114641

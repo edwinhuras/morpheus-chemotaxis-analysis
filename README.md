@@ -45,7 +45,7 @@ morpheus-chemotaxis-analysis/
 │       ├── Rac-Rho_.../
 │       └── Rac-Rho-T_.../
 │
-├── morpheus_files/                    # Place Morpheus model XMLs here
+├── Morpheus_code/                    # Place Morpheus model XMLs here
 │
 ├── utils/                             # Reusable analysis modules
 │   ├── __init__.py
