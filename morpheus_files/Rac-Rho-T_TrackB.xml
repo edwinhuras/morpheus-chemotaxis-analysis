@@ -108,10 +108,10 @@ Comment:	This model extends the Rac-Rho mutual antagonism framework by incorpora
                 <Constant symbol="gamma_rho" value="rand_norm(1.38, 0.0214)"/>
                 <Constant symbol="delta_rho" value="rand_norm(0.721, 0.006887)"/>
                 <Constant symbol="K_rho" value="rand_norm(2.93, 0.0408)"/>
-                <Constant symbol="K_T" name="Tension Hill function parameter" value="5.0"/>
+                <Constant symbol="T_0" name="Tension Hill function parameter" value="5.0"/>
                 <Constant symbol="n_T" name="Tension Hill coefficient" value="4"/>
                 <Constant symbol="n" name="Hill coefficient" value="2"/>
-                <Intermediate symbol="G" value="1*(Rho_i*(k_0_rho+ s_1_rho*(0.93) + (gamma_rho) / (1 + R^n) + T_0 * Tension^n_T / ( K_T ^ n_T + Tension ^ n_T ) ) - (delta_rho+k_1_rho*H)*Rho)"/>
+                <Intermediate symbol="G" value="1*(Rho_i*(k_0_rho+ s_1_rho*(0.93) + (gamma_rho) / (1 + R^n) + beta * Tension^n_T / ( T_0 ^ n_T + Tension ^ n_T ) ) - (delta_rho+k_1_rho*H)*Rho)"/>
                 <DiffEqn symbol-ref="Rho">
                     <Expression>G</Expression>
                 </DiffEqn>
@@ -137,7 +137,7 @@ Comment:	This model extends the Rac-Rho mutual antagonism framework by incorpora
             <Property symbol="Area" value="0.0"/>
             <Property symbol="Perimeter" value="0.0"/>
             <Property symbol="perimeter_diff" value="0.0"/>
-            <Constant symbol="T_0" value="3.0"/>
+            <Constant symbol="beta" value="3.0"/>
             <Property symbol="Tension" value="0.0"/>
             <System time-step="0.05" name="Tension" solver="Dormand-Prince [adaptive, O(5)]">
                 <Rule symbol-ref="Area">
