@@ -31,7 +31,7 @@ jupyter notebook
 
 ## Accessing the Data
 
-This repository includes fully processed collision and tracking data located in `data/processed_full/`. You can use this dataset to immediately jump to generating visualizations without needing to re-process the raw output files. 
+This repository includes fully processed collision and tracking data located in `data/processed_full/`. You can use this dataset to immediately analyze the image processing results without needing to re-process the raw output files. To produce the snapshot figures you will need the original Morpheus simulation output, see note on raw data below.
 
 To use the pre-processed data:
 1. Open `02_visualize_results.ipynb` or `03_cell_shape_visuals.ipynb`.
@@ -198,7 +198,7 @@ Morpheus outputs 24-bit RGB PNG images with the following color encoding:
 
 ## AI Disclaimer
 
-This repository, including its analysis scripts and documentation, was developed by the authors in conjunction with an advanced AI coding assistant. The authors have thoroughly reviewed, proofread, and rigorously tested all code and documentation to ensure correctness and scientific validity, and take full responsibility for the final content.
+This repository, including its analysis scripts and documentation, was developed by the authors in conjunction with an AI coding assistant. The authors have thoroughly reviewed, proofread, and tested all code and documentation to ensure correctness and validity, and take full responsibility for the final content.
 
 ## License
 
