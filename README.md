@@ -8,6 +8,10 @@ Processes simulation outputs — including cell centroid tracking, collision det
 >
 > **Models compared:** WP (Wave Pinning), WPI (WP + Inhibitor), WPI-PIP3 (WP + Inhibitor + PIP3), Rac-Rho (Rac-Rho mutual antagonism), Rac-Rho-T (Rac-Rho + membrane tension feedback)
 
+## AI Disclaimer
+
+This repository, including its analysis scripts and documentation, was developed by the authors in conjunction with an AI coding assistant. The authors have thoroughly reviewed, proofread, and tested all code and documentation to ensure correctness and validity, and take full responsibility for the final content.
+
 ## Quick Start
 
 ```bash
@@ -195,10 +199,6 @@ Morpheus outputs 24-bit RGB PNG images with the following color encoding:
 | Seaborn         | 0.11.0          | Statistical visualization      |
 | SciPy           | 1.5.0           | Statistical tests, smoothing   |
 | Pillow          | 8.0.0           | Image format conversion        |
-
-## AI Disclaimer
-
-This repository, including its analysis scripts and documentation, was developed by the authors in conjunction with an AI coding assistant. The authors have thoroughly reviewed, proofread, and tested all code and documentation to ensure correctness and validity, and take full responsibility for the final content.
 
 ## License
 
