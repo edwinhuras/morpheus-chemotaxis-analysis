@@ -29,6 +29,17 @@ jupyter notebook
 2. Open and run **`02_visualize_results.ipynb`** — loads the processed data and generates overview plots comparing mean collision intensity and track progress across models.
 3. Open and run **`03_cell_shape_visuals.ipynb`** — produces cell shape snapshots overlaid on the track boundary, and collision intensity over time colored by progress.
 
+## Accessing the Data
+
+This repository includes fully processed collision and tracking data located in `data/processed_full/`. You can use this dataset to immediately jump to generating visualizations without needing to re-process the raw output files. 
+
+To use the pre-processed data:
+1. Open `02_visualize_results.ipynb` or `03_cell_shape_visuals.ipynb`.
+2. Update the notebook configuration to load data directly from `data/processed_full/` instead of the default `output/` directory.
+3. Run the notebooks to reproduce the figures and statistics from the study.
+
+> **Note on Raw Data:** The full raw dataset of our Morpheus simulations (including all time-series image frames) is approximately 20GB and exceeds GitHub hosting limits. We have included a small subset of sample simulations in `data/sample_simulations/` for demonstration purposes. The complete raw dataset is available from the authors upon request.
+
 ## Repository Structure
 
 ```
@@ -184,6 +195,10 @@ Morpheus outputs 24-bit RGB PNG images with the following color encoding:
 | Seaborn         | 0.11.0          | Statistical visualization      |
 | SciPy           | 1.5.0           | Statistical tests, smoothing   |
 | Pillow          | 8.0.0           | Image format conversion        |
+
+## AI Disclaimer
+
+This repository, including its analysis scripts and documentation, was developed by the authors in conjunction with an advanced AI coding assistant. The authors have thoroughly reviewed, proofread, and rigorously tested all code and documentation to ensure correctness and scientific validity, and take full responsibility for the final content.
 
 ## License
 
