@@ -38,11 +38,12 @@ jupyter notebook
 This repository includes fully processed collision and tracking data located in `data/processed_full/`. You can use this dataset to immediately analyze the image processing results without needing to re-process the raw output files. To produce the snapshot figures you will need the original Morpheus simulation output, see note on raw data below.
 
 To use the pre-processed data:
+
 1. Open `02_visualize_results.ipynb` or `03_cell_shape_visuals.ipynb`.
 2. Update the notebook configuration to load data directly from `data/processed_full/` instead of the default `output/` directory.
 3. Run the notebooks to reproduce the figures and statistics from the study.
 
-> **Note on Raw Data:** The full raw dataset of our Morpheus simulations (including all time-series image frames) is approximately 20GB and exceeds GitHub hosting limits. We have included a small subset of sample simulations in `data/sample_simulations/` for demonstration purposes. The complete raw dataset is available from the authors upon request.
+> **Note on Raw Data:** The full raw dataset of our Morpheus simulations (including all time-series image frames) is approximately 12GB and exceeds standard GitHub hosting limits. You can download the compressed, original datasets (`GapsSlalom.zip` and `SlalomMedium.zip`) directly from the **Releases** page of this GitHub repository. We have also included a small subset of cleaned sample simulations in `data/sample_simulations/` for demonstration purposes.
 
 ## Repository Structure
 
@@ -199,6 +200,7 @@ Morpheus outputs 24-bit RGB PNG images with the following color encoding:
 | Seaborn         | 0.11.0          | Statistical visualization      |
 | SciPy           | 1.5.0           | Statistical tests, smoothing   |
 | Pillow          | 8.0.0           | Image format conversion        |
+
 
 ## License
 
