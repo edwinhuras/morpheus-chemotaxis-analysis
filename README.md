@@ -5,6 +5,8 @@ Analysis pipeline for quantifying cell-boundary collisions in Morpheus CPM (Cell
 Processes simulation outputs — including cell centroid tracking, collision detection via morphological dilation, and track progress calculation — to produce summary statistics and publication-quality visualizations comparing model types.
 
 > **Manuscript in Preparation:** Huras E, Algorta J, De Belly H, Weiner OD, Edelstein-Keshet L. *Mechanochemical Feedback Enables Efficient Navigation in Complex Chemical Gradients.*
+> 
+> Preprint available: https://www.biorxiv.org/content/10.64898/2026.07.01.735938v1
 >
 > **Models compared:** WP (Wave Pinning), WPI (WP + Inhibitor), WPI-PIP3 (WP + Inhibitor + PIP3), Rac-Rho (Rac-Rho mutual antagonism), Rac-Rho-T (Rac-Rho + membrane tension feedback)
 
@@ -43,7 +45,7 @@ To use the pre-processed data:
 2. Update the notebook configuration to load data directly from `data/processed_full/` instead of the default `output/` directory.
 3. Run the notebooks to reproduce the figures and statistics from the study.
 
-> **Note on Raw Data:** The full raw dataset of our Morpheus simulations (including all time-series image frames) is approximately 12GB and exceeds standard GitHub hosting limits. You can download the compressed, original datasets (`GapsSlalom.zip` and `SlalomMedium.zip`) directly from the **Releases** page of this GitHub repository. We have also included a small subset of cleaned sample simulations in `data/sample_simulations/` for demonstration purposes.
+> **Note on Raw Data:** The full raw dataset of our Morpheus simulations (including all time-series image frames) is approximately 12GB and exceeds standard GitHub hosting limits. You can download the compressed, original datasets (`GapsSlalom.zip` and `SlalomMedium.zip`) directly from the **Releases** page of this GitHub repository. The raw data contains deprecated naming conventions (e.g. GapsSlalom == TrackA) and requires cleaning and processing, the result of which is avaialble in `data/processed_full/` which we recommend using instead to replicate paper results. We have also included a small subset of cleaned sample simulations in `data/sample_simulations/` for demonstration purposes.
 
 ## Repository Structure
 
