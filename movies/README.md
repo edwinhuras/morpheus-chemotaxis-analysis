@@ -13,7 +13,7 @@ https://github.com/user-attachments/assets/bff998b4-8c1d-43cb-879e-033e1f05855c
 
 
 
-Visual demonstration of chemotactic response patterns and cellular behavior analysis.
+Sample cell movements through Track A for each front circuit (WP, WPI, WPI-PIP3) and associated collision metric.
 
 ---
 
